@@ -1,0 +1,145 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a733df2b0c3160345875c545e0854c9e, type: 3}
+  m_Name: English
+  m_EditorClassIdentifier: 
+  LanguageLayout: 0
+  activeFont: {fileID: 11400000, guid: fd861d71fd145a649b55134d85fa8a77, type: 2}
+  loclizedText:
+  - textId: 30
+    text: Step 1
+  - textId: 31
+    text: Wet hands thoroughly under running water
+  - textId: 72
+    text: Step 2
+  - textId: 73
+    text: Apply 3-5 ml of povidone iodine solution to the cupped hands
+  - textId: 90
+    text: Step 3
+  - textId: 91
+    text: a) Palm to palm
+  - textId: 92
+    text: Step 4
+  - textId: 93
+    text: b) Right palm over left dorsum and left palm over right dorsum
+  - textId: 94
+    text: Step 5
+  - textId: 95
+    text: c) Palm to palm, fingers interacted
+  - textId: 96
+    text: Step 6
+  - textId: 97
+    text: d) Backs of fingers to opposing palms with fingers interlocked
+  - textId: 98
+    text: Step 7
+  - textId: 99
+    text: e) Rational rubbing of right thumb clasped in left palm and vice versa
+  - textId: 100
+    text: Step 8
+  - textId: 101
+    text: f) Rational rubbing backwards and forwards with clasped fingers of right
+      hand in left palm and vice versa
+  - textId: 102
+    text: Step 9
+  - textId: 103
+    text: Rinse hands thoroughly (keeping hands down and elbows up)
+  - textId: 104
+    text: Step 10
+  - textId: 105
+    text: Dry hands thoroughly
+  - textId: 106
+    text: Next
+  - textId: 107
+    text: Nurses' practices regarding infection control measures for neonatal patients
+      with PICC line
+  - textId: 108
+    text: 'HOW TO <b>WASH YOUR HANDS</b>
+
+      <size=25>PROTECT YOURSELF AND OTHERS
+      AGAINST INFECTIONS'
+  - textId: 109
+    text: Check TPN prescription order against prepared TPN and check its discoloration.
+  - textId: 110
+    text: 'Perform hand hygiene
+
+      <color="red"><b>(Remember the steps of handwashing).</color></b>
+
+      and
+      roll up light protective cover to allow access to TPN access port.'
+  - textId: 111
+    text: 'Perform hand hygiene and Apply clean non-sterile gloves.
+
+      <color="red"><b>(Remember
+      the steps of handwashing).</color></b>'
+  - textId: 112
+    text: Access insertion port on TPN bag by removing tab ,Swab insertion port on
+      TPN bag vigorously with chlorhexidine 2% alcohol 70% swab for 10 seconds. Allow
+      to dry for 30 seconds.
+  - textId: 113
+    text: Hang the bag on the intravenous pole and re-apply light protect cover.
+  - textId: 114
+    text: Insert line in IV pump and use machine to prime line, Select TPN setting
+      on infusion pump.
+  - textId: 115
+    text: 'Remove gloves and Perform hand hygiene, don safety goggles and gown.
+
+      <color="red"><b>(Remember
+      the steps of handwashing).</color></b>'
+  - textId: 116
+    text: Apply sterile gloves
+  - textId: 117
+    text: Draw up 0.9% Sodium Chloride flush using blunt drawing up needle (maintaining
+      sterile ANTT)
+  - textId: 118
+    text: 'Flush lumen with 10mLs of 0.9% Sodium Chloride using pulsatile action
+      to ensure patency. There is no need to withdraw blood from the catheter.
+
+
+      <color="yellow">Note:</color>
+
+      1-
+      A PICC should be flushed once a week or after every use using strict ANTT
+
+
+      2-
+      If any drug or a solution other than saline is to be used, a blood return has
+      to be verified prior to use in order to verify location within a vein.
+
+
+      3-
+      Flush done using push-pause technique; finished with positive pressure on syringe
+      withdrawal.'
+  - textId: 119
+    text: Using sterile gauze in your dominant hand, lift TPN infusion line
+  - textId: 120
+    text: 'With non-dominant hand, use sterile gauze to remove infusion line cap
+      and discard cap and gauze.
+
+      <color="red">(Note: Cap must be disposed
+      in safety box and gauze must be disposed in red bin)</color>'
+  - textId: 121
+    text: Using sterile gauze in your non-dominant hand, lift lumen and connect to
+      TPN infusion line
+  - textId: 122
+    text: Remove sterile gloves and perform hand hygiene, Commence TPN infusion
+  - textId: 123
+    text: 
+  - textId: 124
+    text: 
+  - textId: 125
+    text: 
+  - textId: 126
+    text: 
+  - textId: 127
+    text: 
+  - textId: 128
+    text: 

@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa4eb49caa1fbf84c8d19136ae33f80c, type: 3}
+  m_Name: Questions SIM-ESS-007
+  m_EditorClassIdentifier: 
+  Questions:
+  - question: 'What does "a = 2d / t^2" represent in the experiment''s data table? '
+    answers:
+    - answerText: Acceleration of the cart
+      _answerSprite: {fileID: 0}
+      IsCorrect: 1
+    - answerText: Distance traveled by the cart
+      _answerSprite: {fileID: 0}
+      IsCorrect: 0
+    - answerText: Weight of the cart
+      _answerSprite: {fileID: 0}
+      IsCorrect: 0
+    - answerText: Time elapsed during the experiment
+      _answerSprite: {fileID: 0}
+      IsCorrect: 0
+    QuestionAudio: {fileID: 8300000, guid: 5cdd8cbfd6710f144a820398e7c3e956, type: 3}
+    _answerd: 0
+    Layout: 2
+    questionPrefab: {fileID: 0}
+  - question: Why is the photogate attached to the timer?
+    answers:
+    - answerText: To measure the distance traveled by the cart
+      _answerSprite: {fileID: 21300000, guid: 9403eebaf8b184147b2909bd15a37270, type: 3}
+      IsCorrect: 0
+    - answerText: To measure the acceleration of the cart
+      _answerSprite: {fileID: 21300000, guid: ebe386b01a58fa34e9978dceafe0a0d1, type: 3}
+      IsCorrect: 0
+    - answerText: To record the time when the cart passes
+      _answerSprite: {fileID: 21300000, guid: fc3923fc7e8e6844aadab9e57e86befb, type: 3}
+      IsCorrect: 1
+    - answerText: To synchronize with the weight holder
+      _answerSprite: {fileID: 21300000, guid: 47749b5ece856e24897de6e19adada7a, type: 3}
+      IsCorrect: 0
+    QuestionAudio: {fileID: 8300000, guid: 79f289f79b1d811428020fe291da23b2, type: 3}
+    _answerd: 0
+    Layout: 2
+    questionPrefab: {fileID: 0}
+  - question: Why is it important to position the Air Track on a stable table?
+    answers:
+    - answerText: To prevent the cart from moving
+      _answerSprite: {fileID: 21300000, guid: 9403eebaf8b184147b2909bd15a37270, type: 3}
+      IsCorrect: 0
+    - answerText: To ensure accurate timing measurements
+      _answerSprite: {fileID: 21300000, guid: ebe386b01a58fa34e9978dceafe0a0d1, type: 3}
+      IsCorrect: 1
+    - answerText: To make the experiment easier
+      _answerSprite: {fileID: 21300000, guid: fc3923fc7e8e6844aadab9e57e86befb, type: 3}
+      IsCorrect: 0
+    - answerText: To measure the distance accurately
+      _answerSprite: {fileID: 21300000, guid: 47749b5ece856e24897de6e19adada7a, type: 3}
+      IsCorrect: 0
+    QuestionAudio: {fileID: 8300000, guid: 1ffad82dbb294604c8b7a8f033ee79b4, type: 3}
+    _answerd: 0
+    Layout: 2
+    questionPrefab: {fileID: 0}
+  - question: What is the purpose of clamping the pulley to one end of the Air Track
+      Dynamics System?
+    answers:
+    - answerText: To weigh the cart
+      _answerSprite: {fileID: 21300000, guid: 9403eebaf8b184147b2909bd15a37270, type: 3}
+      IsCorrect: 0
+    - answerText: To stabilize the cart
+      _answerSprite: {fileID: 21300000, guid: ebe386b01a58fa34e9978dceafe0a0d1, type: 3}
+      IsCorrect: 0
+    - answerText: To measure the cart's weight
+      _answerSprite: {fileID: 21300000, guid: fc3923fc7e8e6844aadab9e57e86befb, type: 3}
+      IsCorrect: 0
+    - answerText: To apply a force to the cart
+      _answerSprite: {fileID: 21300000, guid: 8daf16211db78f1449db23a8376d7713, type: 3}
+      IsCorrect: 1
+    QuestionAudio: {fileID: 8300000, guid: e0ce0aab466b0654582998ed1c5208ac, type: 3}
+    _answerd: 0
+    Layout: 2
+    questionPrefab: {fileID: 0}
