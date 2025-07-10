@@ -13,5 +13,9 @@ EditorBuildSettings:
       type: 2}
     Unity.XR.PXR.Settings: {fileID: 11400000, guid: 0e17621e40a58f74c91655479a69a540,
       type: 2}
+    com.unity.addressableassets: {fileID: 11400000, guid: a4a34f7c0e60ad54288e8e99f2316951,
+      type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: c98a1fb6bcd5550499f5f11b2a29206c,
+      type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: cf25d76fb5d0f594cbf2ff5f0841d29a,
       type: 2}
