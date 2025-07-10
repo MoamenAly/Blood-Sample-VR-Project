@@ -1,5 +1,6 @@
 using DG.Tweening;
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -32,7 +33,7 @@ public class MirrorUIContent : MonoBehaviour
     }
 
     void Mirrior() {
-        Theme_Text[] childTransforms = GetComponentsInChildren<Theme_Text>(true);       
+        TextMeshProUGUI[] childTransforms = GetComponentsInChildren<TextMeshProUGUI>(true);       
 
         for (int i = 0; i < childTransforms.Length; i++)
         {
@@ -89,7 +90,7 @@ public class MirrorUIContent : MonoBehaviour
 
     void MirriorN()
     {
-        Theme_Text[] childTransforms = GetComponentsInChildren<Theme_Text>(true);
+        TextMeshProUGUI[] childTransforms = GetComponentsInChildren<TextMeshProUGUI>(true);
 
         for (int i = 0; i < childTransforms.Length; i++)
         {

@@ -10,12 +10,12 @@ using UnityEngine;
 //    }
 //}
 
-public class DropdownListAttribute : PropertyAttribute
-{
-    public string ListName;
+//public class DropdownListAttribute : PropertyAttribute
+//{
+//    public string ListName;
 
-    public DropdownListAttribute(string listName)
-    {
-        ListName = listName;
-    }
-}
+//    public DropdownListAttribute(string listName)
+//    {
+//        ListName = listName;
+//    }
+//}

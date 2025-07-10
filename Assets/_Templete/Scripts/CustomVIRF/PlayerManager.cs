@@ -29,11 +29,11 @@ public class PlayerManager : MonoBehaviour
     private BNGPlayerController _playerController;
 
 
-    [FoldoutGroup("WEGL Setup")]
-    [SerializeField] FreeCamera freeCamera;
-    [SerializeField] float _angleRotaion = 20;
-    [SerializeField] float refrecePointUpOffest = 0.85f;
-    [SerializeField] float cameraDistacne = -0.8f;
+    //[FoldoutGroup("WEGL Setup")]
+    //[SerializeField] FreeCamera freeCamera;
+    //[SerializeField] float _angleRotaion = 20;
+    //[SerializeField] float refrecePointUpOffest = 0.85f;
+    //[SerializeField] float cameraDistacne = -0.8f;
 
     private void OnValidate()
     {

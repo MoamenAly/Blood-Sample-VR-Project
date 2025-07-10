@@ -23,8 +23,8 @@ public class StepsHelper : MonoBehaviour
 {
     public AudioManager audioManager;
 
-    public Theme_Text titleTheme_Text;
-    public Theme_Text descriptionTheme_Text;
+  //  public Theme_Text titleTheme_Text;
+  //  public Theme_Text descriptionTheme_Text;
 
     public List<StepHolder> steps;
 
@@ -95,8 +95,8 @@ public class StepsHelper : MonoBehaviour
         if (currentStepHolder != null)
         {
             audioManager.Play(currentStepHolder.narrationId);
-            titleTheme_Text._SetTextID(currentStepHolder.titelTextId);
-            descriptionTheme_Text._SetTextID(currentStepHolder.descriptionTextId);
+     //       titleTheme_Text._SetTextID(currentStepHolder.titelTextId);
+     //       descriptionTheme_Text._SetTextID(currentStepHolder.descriptionTextId);
 
             SetPropsState(true);
 
