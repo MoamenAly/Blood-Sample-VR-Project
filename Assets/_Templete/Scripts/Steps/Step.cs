@@ -48,10 +48,10 @@ public class Step {
 
 
 
-    private ScenarioManager[] GetParentObject()
+    private StepsManager[] GetParentObject()
     {
         // Find the parent object containing this step
-        return GameObject.FindObjectsOfType<ScenarioManager>(true); // Adjust this based on your actual parent object retrieval logic
+        return GameObject.FindObjectsOfType<StepsManager>(true); // Adjust this based on your actual parent object retrieval logic
     }
 
     internal bool IsReady()

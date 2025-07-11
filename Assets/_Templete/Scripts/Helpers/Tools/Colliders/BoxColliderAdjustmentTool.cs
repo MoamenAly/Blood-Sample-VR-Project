@@ -6,7 +6,7 @@ using UnityEditor;
 
 public static class BoxColliderAdjustmentTool
 {
-    [MenuItem("Scivr/Collider/BoxCollider To Child")]
+    [MenuItem("Helper/Collider/BoxCollider To Child")]
     [MenuItem("Tools/Copy And Align BoxCollider From First Child")]
     private static void CopyAndAlignBoxColliderFromFirstChild()
     {
@@ -70,7 +70,7 @@ public static class BoxColliderAdjustmentTool
         Debug.Log("BoxCollider copied and aligned from first child to selected GameObject.");
     }
 
-    [MenuItem("Scivr/Collider/BoxCollider To Children")]
+    [MenuItem("Helper/Collider/BoxCollider To Children")]
     private static void AdjustBoxColliderToChildrenMenuOption()
     {
         // Ensure a GameObject is selected

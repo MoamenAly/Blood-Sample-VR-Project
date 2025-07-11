@@ -1,21 +1,26 @@
+using Sirenix.OdinInspector;
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
-using Sirenix.OdinInspector;
-using TMPro;
-using UnityEngine.InputSystem;
-using UnityEngine.Localization.Tables;
-using UnityEngine.Localization.Components;
-using Unity.VisualScripting;
-using static UnityEngine.Rendering.DebugUI;
+using UnityEngine.UI;
+
 public class LocalizationManager : MonoSinglton<LocalizationManager>
 {
     private bool _active = false;
     public UnityAction<Locale> OnLocalChangedEvent;
     public UnityEvent OnArabicLanguageSelected, OnEnglishLanguageSelected;
+    public bool isUseDropdown;
+    [ShowIf("isUseDropdown")]
     [SerializeField] private TMP_Dropdown languageDropdown;
+
+    public bool isUseButtons;
+    [ShowIf("isUseButtons")]
+    [SerializeField] private Button englishButton;
+    [ShowIf("isUseButtons")]
+    [SerializeField] private Button arabicButton;
 
     public Locale CurrentLocale
     {
@@ -28,12 +33,21 @@ public class LocalizationManager : MonoSinglton<LocalizationManager>
 
     private void Start()
     {
-        languageDropdown.onValueChanged.AddListener(ChangeLocale);
+        if (isUseDropdown)
+            languageDropdown.onValueChanged.AddListener(ChangeLocale);
+
+        if (isUseButtons)
+        {
+            englishButton.onClick.AddListener(EnglishLangauge);
+            arabicButton.onClick.AddListener(ArabicLangauge);
+        }
         int ID = PlayerPrefs.GetInt("LocalKey", 0);
         languageDropdown.value = ID;
         ChangeLocale(ID);
     }
 
+    [Button]
+    [ShowIf("isUseDropdown")]
     public void ChangeLocale(int localeID)
     {
         if (_active)
@@ -43,6 +57,31 @@ public class LocalizationManager : MonoSinglton<LocalizationManager>
 
         StartCoroutine(SetLocale(localeID));
     }
+
+    [Button]
+    [ShowIf("isUseButtons")]
+    public void EnglishLangauge()
+    {
+        if (_active)
+        {
+            return;
+        }
+
+        StartCoroutine(SetLocale(0));
+    }
+
+    [Button]
+    [ShowIf("isUseButtons")]
+    public void ArabicLangauge()
+    {
+        if (_active)
+        {
+            return;
+        }
+
+        StartCoroutine(SetLocale(1));
+    }
+
     private IEnumerator SetLocale(int localeID)
     {
         _active = true;
@@ -71,28 +110,4 @@ public class LocalizationManager : MonoSinglton<LocalizationManager>
     {
         return CurrentLocale.Identifier.Code == "ar";
     }
-
-
-
-
-
-    [Button]
-    public void ChangeToEnglish()
-    {
-        ChangeLocale(0);
-
-    }
-
-
-    [Button]
-    public void ChangeToArabic()
-    {
-        ChangeLocale(1);
-
-    }
-
-
-
-
-
 }

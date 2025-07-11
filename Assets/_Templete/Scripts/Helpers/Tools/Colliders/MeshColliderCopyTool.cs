@@ -5,7 +5,7 @@ using Unity.VisualScripting;
 
 public class MeshColliderCopyTool
 {
-    [MenuItem("Scivr/Collider/Copy MeshCollider")]
+    [MenuItem("Helper/Collider/Copy MeshCollider")]
     private static void CopyMeshColliderFromFirstChild()
     {
         GameObject selectedGameObject = Selection.activeGameObject;
@@ -76,7 +76,7 @@ public class MeshColliderCopyTool
         return transformedMesh;
     }
 
-    [MenuItem("Scivr/Collider/Copy MeshColliders")]
+    [MenuItem("Helper/Collider/Copy MeshColliders")]
     private static void CopyMeshCollidersFromFirstChild()
     {
         GameObject selectedGameObject = Selection.activeGameObject;

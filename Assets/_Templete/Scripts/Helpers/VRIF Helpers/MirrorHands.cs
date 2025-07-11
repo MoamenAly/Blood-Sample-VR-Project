@@ -4,19 +4,19 @@ using UnityEditor;
 
 public class MirrorHands
 {
-    [MenuItem("Scivr/Mirror Hands/Along X Axis &x")]
+    [MenuItem("Helper/Mirror Hands/Along X Axis &x")]
     static void MirrorHandsAlongX()
     {
         MirrorHandsAlongAxis(new Vector3(-1, 1, 1));
     }
 
-    [MenuItem("Scivr/Mirror Hands/Along Y Axis &y")]
+    [MenuItem("Helper/Mirror Hands/Along Y Axis &y")]
     static void MirrorHandsAlongY()
     {
         MirrorHandsAlongAxis(new Vector3(1, -1, 1));
     }
 
-    [MenuItem("Scivr/Mirror Hands/Along Z Axis &z")]
+    [MenuItem("Helper/Mirror Hands/Along Z Axis &z")]
     static void MirrorHandsAlongZ()
     {
         MirrorHandsAlongAxis(new Vector3(1, 1, -1));

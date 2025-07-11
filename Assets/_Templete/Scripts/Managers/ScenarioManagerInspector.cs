@@ -2,7 +2,7 @@
 using Sirenix.OdinInspector.Editor;
 using UnityEditor;
 using UnityEngine;
-[CustomEditor(typeof(ScenarioManager))]
+[CustomEditor(typeof(StepsManager))]
 
 public class ScenarioManagerInspector : OdinEditor
 {
