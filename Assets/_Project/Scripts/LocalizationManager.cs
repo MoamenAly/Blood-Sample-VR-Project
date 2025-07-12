@@ -34,16 +34,20 @@ public class LocalizationManager : MonoSinglton<LocalizationManager>
     private void Start()
     {
         if (isUseDropdown)
+        {
             languageDropdown.onValueChanged.AddListener(ChangeLocale);
+            int ID = PlayerPrefs.GetInt("LocalKey", 0);
+            languageDropdown.value = ID;
+            ChangeLocale(ID);
+        }
 
         if (isUseButtons)
         {
             englishButton.onClick.AddListener(EnglishLangauge);
             arabicButton.onClick.AddListener(ArabicLangauge);
+            ChangeLocale(0);
         }
-        int ID = PlayerPrefs.GetInt("LocalKey", 0);
-        languageDropdown.value = ID;
-        ChangeLocale(ID);
+
     }
 
     [Button]
