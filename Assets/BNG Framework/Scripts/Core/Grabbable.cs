@@ -1267,19 +1267,19 @@ namespace BNG {
                 // Update local transform in real time
                 if (g != null) {
                     if (ParentToHands) {
-                        Debug.Log("1");
+                       
                         transform.localPosition = Vector3.Lerp(transform.localPosition, Vector3.zero - GrabPositionOffset, fractionOfJourney);
                         transform.localRotation = Quaternion.Lerp(transform.localRotation, grabTransform.localRotation, Time.deltaTime * 10);
                     }
                     // Position the object in world space using physics
                     else {
-                        Debug.Log("2");
+                       
                         movePosition(Vector3.Lerp(transform.position, destination, fractionOfJourney));
                         moveRotation(Quaternion.Lerp(transform.rotation, destRotation, Time.deltaTime * 20));
                     }
                 }
                 else {
-                        Debug.Log("3");
+                        
                     movePosition(destination);
                     transform.localRotation = grabTransform.localRotation;
                 }
