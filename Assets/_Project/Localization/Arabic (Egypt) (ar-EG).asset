@@ -15,11 +15,16 @@ MonoBehaviour:
   m_Identifier:
     m_Code: ar-EG
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - rid: 2051435091811106816
   m_LocaleName: Arabic (Egypt) (ar-EG)
   m_CustomFormatCultureCode: 
   m_UseCustomFormatter: 0
-  m_SortOrder: 1
+  m_SortOrder: 0
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 2051435091811106816
+      type: {class: FallbackLocale, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Locale: {fileID: 11400000, guid: 26809b68b45fac441b4da964c09e6d76, type: 2}

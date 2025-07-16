@@ -5,18 +5,18 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
 using TMPro;
+using UnityEngine.Events;
 public class VideoManager : MonoBehaviour
 {
-
-
     [SerializeField] private VideoPlayer video;
     [FoldoutGroup("Video Controls")]
     [SerializeField] private Slider  videoSeekSlider;
     [FoldoutGroup("Video Controls")]
     [SerializeField] private Button PlayBtn, PauseBtn , SeekForward , SeekBackword;
     [FoldoutGroup("Video Controls")]
-    [SerializeField] private TextMeshProUGUI currentTimeText, totalTimeText;
-
+    [SerializeField] private TextMeshProUGUI currentTimeText, totalTimeText , percentage;
+    private float percentageValue;
+    [SerializeField] public UnityEvent2 _OnVideoFinished;
 
     // Start is called before the first frame update
     void Start()
@@ -42,17 +42,23 @@ public class VideoManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (video.frameCount > 0)
+        if (video.frameCount > 0 && video.length > 0)
         {
             videoSeekSlider.value = video.frame;
 
-            // Update current time display
-            currentTimeText.text = FormatTime(video.time);
+            // Update current time and total duration display
+            double currentTime = video.time;
+            double totalTime = video.length;
 
-            // Update total duration display
-            totalTimeText.text = FormatTime(video.length);
+            currentTimeText.text = FormatTime(currentTime);
+            totalTimeText.text = FormatTime(totalTime);
+
+            // Calculate percentage based on seconds
+            percentageValue = (float)(currentTime / totalTime) * 100f;
+            percentage.text = percentageValue.ToString("F1") + "%";
         }
     }
+
     private void SetSlider()
     {
         ulong frameCount = video.frameCount;
@@ -78,7 +84,7 @@ public class VideoManager : MonoBehaviour
     {
         int minutes = Mathf.FloorToInt((float)time / 60f);
         int seconds = Mathf.FloorToInt((float)time % 60f);
-        return string.Format("{0:0}:{1:0}", minutes, seconds);
+        return string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
     private void OnVideoFinished(VideoPlayer vp)
@@ -91,5 +97,6 @@ public class VideoManager : MonoBehaviour
 
         // Reset slider
         videoSeekSlider.value = videoSeekSlider.maxValue;
+        _OnVideoFinished?.Invoke();
     }
 }

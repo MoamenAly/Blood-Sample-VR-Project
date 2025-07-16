@@ -18,9 +18,9 @@ public class LocalizationManager : MonoSinglton<LocalizationManager>
 
     public bool isUseButtons;
     [ShowIf("isUseButtons")]
-    [SerializeField] private Button englishButton;
+    [SerializeField, ReadOnly] private Button2 englishButton;
     [ShowIf("isUseButtons")]
-    [SerializeField] private Button arabicButton;
+    [SerializeField, ReadOnly] private Button2 arabicButton;
 
     public Locale CurrentLocale
     {
@@ -71,7 +71,7 @@ public class LocalizationManager : MonoSinglton<LocalizationManager>
             return;
         }
 
-        StartCoroutine(SetLocale(0));
+        StartCoroutine(SetLocale(1));
     }
 
     [Button]
@@ -83,7 +83,7 @@ public class LocalizationManager : MonoSinglton<LocalizationManager>
             return;
         }
 
-        StartCoroutine(SetLocale(1));
+        StartCoroutine(SetLocale(0));
     }
 
     private IEnumerator SetLocale(int localeID)

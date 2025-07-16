@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-Assets-Arabic (Egypt) (ar-EG)
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-Assets-Arabic (Egypt) (ar-EG)
+  m_Data:
+    m_SerializedData: []
+  m_GUID: ecb04467dce566c4ba5e347e81b40504
+  m_SerializeEntries:
+  - m_GUID: 7b537fabf5d5f8841832e5facb731d61
+    m_Address: Welcome
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ar-EG
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: e5874f3717d398d4ba3a714bfb945fd7, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: b7c3f0e0b6cac934a8e30c76abc7bacb, type: 2}
+    - {fileID: 11400000, guid: a4b1d7e2516af1b47860a712ce9e2225, type: 2}
