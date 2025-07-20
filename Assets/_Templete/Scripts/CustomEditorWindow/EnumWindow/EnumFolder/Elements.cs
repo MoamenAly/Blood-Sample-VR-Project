@@ -11,4 +11,7 @@ public enum Elements
 	TpnPort = 14,
 	GlucozHole = 15,
 	FlushGlocozJac = 16,
+	mask,
+	Gloves,
+	Coat,
 }

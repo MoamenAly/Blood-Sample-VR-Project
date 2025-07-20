@@ -15,9 +15,13 @@ public class SafteyItem : MonoBehaviour
     private void Awake()
     {
         if (!gameObject.TryGetComponent<GrabbableUnityEvents>(out _grabbableUnityEvents)) _grabbableUnityEvents = gameObject.AddComponent<GrabbableUnityEvents>();
-        SafteyManager.Instance.SubscribeItem(this);
+       
     }
 
+    private void Start()
+    {
+        SafteyManager.Instance.SubscribeItem(this);
+    }
 
     private void OnEnable()
     {
@@ -39,7 +43,7 @@ public class SafteyItem : MonoBehaviour
     public void OnTakeitemSucces()
     {
 
-        this.gameObject.SetActive(false);
+       
         OnSucces?.Invoke();
     }
 

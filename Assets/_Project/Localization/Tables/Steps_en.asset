@@ -22,6 +22,26 @@ MonoBehaviour:
     m_Localized: Start
     m_Metadata:
       m_Items: []
+  - m_Id: 3589894985805824
+    m_Localized: Wearing personal protective equipment
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3593672866721792
+    m_Localized: Follow the safe dressing sequenc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3598964446785536
+    m_Localized: Wear the gown
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3599045472350208
+    m_Localized: Wear the mask
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3599051889635328
+    m_Localized: Put on the gloves
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
