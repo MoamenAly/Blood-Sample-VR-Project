@@ -23,6 +23,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-ar-EG
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 725b77690868cfb4ab68554d97f9704f
+    m_Address: UIData_ar-EG
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ar-EG
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: e5874f3717d398d4ba3a714bfb945fd7, type: 2}
   m_SchemaSet:
