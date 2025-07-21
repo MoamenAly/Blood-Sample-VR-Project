@@ -31,15 +31,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3598964446785536
-    m_Localized: Wear the gown
+    m_Localized: Mask
     m_Metadata:
       m_Items: []
   - m_Id: 3599045472350208
-    m_Localized: Wear the mask
+    m_Localized: Gloves
     m_Metadata:
       m_Items: []
   - m_Id: 3599051889635328
-    m_Localized: Put on the gloves
+    m_Localized: Coat
     m_Metadata:
       m_Items: []
   references:

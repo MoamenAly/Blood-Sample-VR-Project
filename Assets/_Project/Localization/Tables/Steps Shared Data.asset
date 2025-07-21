@@ -30,15 +30,17 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3598964446785536
-    m_Key: firstsafteystep
+    m_Key: mask
     m_Metadata:
       m_Items: []
   - m_Id: 3599045472350208
-    m_Key: secondsafteystep
+    m_Key: 'gloves
+
+'
     m_Metadata:
       m_Items: []
   - m_Id: 3599051889635328
-    m_Key: Thirdsafteystep
+    m_Key: coat
     m_Metadata:
       m_Items: []
   m_Metadata:
