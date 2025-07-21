@@ -4,4 +4,5 @@ public enum Menus
 {
 	Language = 1,
 	Saftey,
+	videoScreen
 }

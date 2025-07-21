@@ -10,7 +10,7 @@ public class VideoManager : MonoBehaviour
 {
     [SerializeField] private VideoPlayer video;
     [FoldoutGroup("Video Controls")]
-    [SerializeField] private Slider  videoSeekSlider;
+    [SerializeField] private Slider2  videoSeekSlider;
     [FoldoutGroup("Video Controls")]
     [SerializeField] private Button PlayBtn, PauseBtn , SeekForward , SeekBackword;
     [FoldoutGroup("Video Controls")]
