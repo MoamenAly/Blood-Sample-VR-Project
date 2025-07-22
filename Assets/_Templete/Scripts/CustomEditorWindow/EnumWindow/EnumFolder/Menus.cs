@@ -5,5 +5,6 @@ public enum Menus
 	Language = 1,
 	Saftey,
 	videoScreen,
-	CheckReady
+	CheckReady,
+	Tools
 }

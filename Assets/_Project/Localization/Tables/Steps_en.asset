@@ -42,6 +42,14 @@ MonoBehaviour:
     m_Localized: Coat
     m_Metadata:
       m_Items: []
+  - m_Id: 4328029558468608
+    m_Localized: Preparing the tools
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4328910353920000
+    m_Localized: Drag the eight items within one minute
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

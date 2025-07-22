@@ -43,6 +43,14 @@ MonoBehaviour:
     m_Key: coat
     m_Metadata:
       m_Items: []
+  - m_Id: 4328029558468608
+    m_Key: toolstitles
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4328910353920000
+    m_Key: taketoolsTitles
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
