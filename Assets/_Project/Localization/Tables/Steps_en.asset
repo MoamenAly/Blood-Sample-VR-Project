@@ -50,6 +50,10 @@ MonoBehaviour:
     m_Localized: Drag the eight items within one minute
     m_Metadata:
       m_Items: []
+  - m_Id: 4403496990863360
+    m_Localized: Identity verification
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

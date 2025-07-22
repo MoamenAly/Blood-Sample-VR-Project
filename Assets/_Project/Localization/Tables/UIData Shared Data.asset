@@ -37,6 +37,18 @@ MonoBehaviour:
     m_Key: nextbtn
     m_Metadata:
       m_Items: []
+  - m_Id: 424751204462592
+    m_Key: nameverification
+    m_Metadata:
+      m_Items: []
+  - m_Id: 424954913419264
+    m_Key: idVerification
+    m_Metadata:
+      m_Items: []
+  - m_Id: 425178343993344
+    m_Key: sedation verification
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

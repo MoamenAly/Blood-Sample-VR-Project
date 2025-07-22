@@ -6,5 +6,6 @@ public enum Menus
 	Saftey,
 	videoScreen,
 	CheckReady,
-	Tools
+	Tools,
+	 IdentityScreen
 }

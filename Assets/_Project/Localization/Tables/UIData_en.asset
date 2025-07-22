@@ -40,6 +40,18 @@ MonoBehaviour:
     m_Localized: Next
     m_Metadata:
       m_Items: []
+  - m_Id: 424751204462592
+    m_Localized: Verify the name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 424954913419264
+    m_Localized: Verify the card number
+    m_Metadata:
+      m_Items: []
+  - m_Id: 425178343993344
+    m_Localized: Verify the sedation bracelet
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
