@@ -38,6 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 8900000, guid: dc02d1a0a2002994d94c31c75295677d, type: 3}
   m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0.30879715, g: 0.3288686, b: 0.4198507, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -197,11 +198,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: URINE CONTAINER
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: dd554889a95a64f49aa2f5cfa858c2af,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -269,11 +265,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gauze
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7c223288de1351c47aad9b4537f20f53,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -420,12 +411,12 @@ MonoBehaviour:
   m_RequiresColorTexture: 0
   m_Version: 2
   m_TaaSettings:
-    m_Quality: 3
-    m_FrameInfluence: 0.1
-    m_JitterScale: 1
-    m_MipBias: 0
-    m_VarianceClampScale: 0.9
-    m_ContrastAdaptiveSharpening: 0
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
 --- !u!1001 &100135432
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -591,11 +582,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ICE DISH
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: c7d2ef655ab20cc48b4e7ef59736a59a,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5670581146105683696, guid: c7d2ef655ab20cc48b4e7ef59736a59a,
         type: 3}
@@ -767,11 +753,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: plate
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: e4be6cd4f73a2f244a15df8c82414be8,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -964,11 +945,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cotton (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: c1f6822d46b4b3f49adb07aa9e910c33,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1041,11 +1017,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PLASTIC JAR
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 743602821757e7a4abe2fecbe66448a8,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1150,11 +1121,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PLASTIIC BAG
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: ed2e6c186c706a6439f4e6add5890f6b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1222,11 +1188,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bandage (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 694f08601580e974bb7bf6d6d8aa20c3,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6169591812526542957, guid: 694f08601580e974bb7bf6d6d8aa20c3,
         type: 3}
@@ -1321,11 +1282,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bandage (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: eb5a3954593aa4e4ca65de23cbb8159a,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1394,11 +1350,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: troooly
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: a97a2343998d26c4e8ddcb478bb1f8f4,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1466,11 +1417,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: rack
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 34cde0137af8cd543b06837ce9aacca7,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1545,11 +1491,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cotton
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: c1f6822d46b4b3f49adb07aa9e910c33,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1617,11 +1558,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ICE BAG
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: cbdaddee7fc88284490750f6cdb5509f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1809,11 +1745,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Medical Syringe
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 770c5a002a9bcce4d82d65b1c26c224c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6842518684147039802, guid: 770c5a002a9bcce4d82d65b1c26c224c,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1892,11 +1823,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cotton (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: c1f6822d46b4b3f49adb07aa9e910c33,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1969,11 +1895,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Vacutainer
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 6b634a9a271d2da41a91dfc1c46343a1,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2053,11 +1974,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Alcohol Pad
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 333f5fc19852cea47a22f1f2cf2d9aa4,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2130,11 +2046,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cotton (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: c1f6822d46b4b3f49adb07aa9e910c33,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

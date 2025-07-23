@@ -17,6 +17,11 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 2c77db42716f6254c83adacf0735b4fd
   m_SerializeEntries:
+  - m_GUID: 1f00d73f8b74c33439e1124b64a2b3a4
+    m_Address: Assets/_Project/Localization/Tables/UIData Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6000fcfb1bc69d649b9d31438537630b
     m_Address: Assets/_Project/Localization/Tables/Audios Shared Data.asset
     m_ReadOnly: 1
@@ -24,11 +29,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a1c87bacb88645340b45c0a441f625fe
     m_Address: Assets/_Project/Localization/Tables/Steps Shared Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 1f00d73f8b74c33439e1124b64a2b3a4
-    m_Address: Assets/_Project/Localization/Tables/UIData Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
