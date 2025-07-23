@@ -16,7 +16,12 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 9545878e8891b3248ba493c519c6c2ed
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 925f9a517f40e144887df5e6b448a2a0
+    m_Address: Assets/BNG Framework/Materials/Glow 2.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: e5874f3717d398d4ba3a714bfb945fd7, type: 2}
   m_SchemaSet:
