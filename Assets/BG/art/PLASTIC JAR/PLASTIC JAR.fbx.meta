@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e8a4a3e59ad89b54f85b3f512e9d9001
+guid: 743602821757e7a4abe2fecbe66448a8
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,58 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: 21 - Default
-    second: {fileID: 2100000, guid: 30240b859fdd78d449be7ce1f3ddc195, type: 2}
+      name: GLASS
+    second: {fileID: 2100000, guid: 22cb8661dc495f742bace826580aa8e2, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: B
-    second: {fileID: 2100000, guid: 08822c8dc73a6804f94fa4f798e18f53, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Veins
-    second: {fileID: 2100000, guid: 68993d425f9b60f4e8e97950b9049cbe, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: armo1
-    second: {fileID: 2100000, guid: bc3807ec87e410041b405114da0eda79, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: b01
-    second: {fileID: 2100000, guid: 9db5cd483bb0b5340a6364c50bad0ff3, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: "butterfly\_needle_2"
-    second: {fileID: 2100000, guid: 32a7d3ad07a83e5449db23cd938fbc68, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: eye01
-    second: {fileID: 2100000, guid: 7f0c101c25f19224f8a023bcdb36ec5a, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: glab
-    second: {fileID: 2100000, guid: ebcc9bbb370594c4899e5f9ee01606ed, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: hand
-    second: {fileID: 2100000, guid: 7af9021991199aa48a990527afa3f06b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: sh01
-    second: {fileID: 2100000, guid: fc0dedfd572b9fe45ab10dd8965ccd0c, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: shoe01
-    second: {fileID: 2100000, guid: 1540b53945bd14f4c9eece1d08a5fe27, type: 2}
+      name: M_plastic_jar_red
+    second: {fileID: 2100000, guid: 35899d5cfdaaa4940af228eee475cbb7, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
