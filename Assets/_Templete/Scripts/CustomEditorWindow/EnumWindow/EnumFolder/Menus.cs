@@ -7,5 +7,7 @@ public enum Menus
 	videoScreen,
 	CheckReady,
 	Tools,
-	 IdentityScreen
+	 IdentityScreen,
+	 Tornkey,
+	 WareedTest,
 }
