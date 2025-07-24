@@ -129,6 +129,17 @@ MonoBehaviour:
       in a deduction of 25 points and requiring a retry.
     m_Metadata:
       m_Items: []
+  - m_Id: 5143064488288256
+    m_Localized: Needle Insertion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5143370471153664
+    m_Localized: "The needle should be inserted at an angle between 15\u201330\xB0
+      to ensure proper contact with the muscle.\nThe red color is used as an indicator
+      of reaching the correct depth.\nThe appearance of a slight blood flashback
+      confirms that the needle is correctly positioned inside the vein."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

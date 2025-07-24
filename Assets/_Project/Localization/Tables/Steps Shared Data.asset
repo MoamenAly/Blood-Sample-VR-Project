@@ -119,6 +119,14 @@ MonoBehaviour:
     m_Key: Vacutainer Needle
     m_Metadata:
       m_Items: []
+  - m_Id: 5143064488288256
+    m_Key: EnterNeedleTitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5143370471153664
+    m_Key: EnterNeedleDescrip
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
