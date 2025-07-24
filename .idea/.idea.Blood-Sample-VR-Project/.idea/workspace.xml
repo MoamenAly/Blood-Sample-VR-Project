@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c6005f3-4d95-4565-879a-12cf28c82f73" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-Balanced-Renderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/URP-Balanced-Renderer.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/ArabicFont.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/ArabicFont.asset" afterDir="false" />
+    <list default="true" id="8deea710-3fd8-472a-a9bf-cee73947c874" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Blood-Sample-VR-Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Blood-Sample-VR-Project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Localization/Tables/Steps Shared Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Localization/Tables/Steps Shared Data.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Localization/Tables/Steps_ar-EG.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Localization/Tables/Steps_ar-EG.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Localization/Tables/Steps_en.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Localization/Tables/Steps_en.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/OperationRoom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/OperationRoom.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Templete/Scripts/CustomEditorWindow/EnumWindow/EnumFolder/Menus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Templete/Scripts/CustomEditorWindow/EnumWindow/EnumFolder/Menus.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +25,7 @@
   "customColor": "",
   "associatedIndex": 1
 }]]></component>
-  <component name="ProjectId" id="30KRPSLBHs0FxSKvrU5GIFhL9g0" />
+  <component name="ProjectId" id="30KRPJ7AD8V5DTbK5g2XrdmZc65" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -34,7 +34,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "UI-System",
+    "git-widget-placeholder": "Scenario",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -90,12 +90,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1c6005f3-4d95-4565-879a-12cf28c82f73" name="Changes" comment="" />
-      <created>1753374257590</created>
+      <changelist id="8deea710-3fd8-472a-a9bf-cee73947c874" name="Changes" comment="" />
+      <created>1753374254399</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1753374257590</updated>
-      <workItem from="1753374259278" duration="671000" />
+      <updated>1753374254399</updated>
+      <workItem from="1753374254602" duration="2264000" />
     </task>
     <servers />
   </component>

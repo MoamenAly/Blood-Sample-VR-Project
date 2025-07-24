@@ -54,6 +54,81 @@ MonoBehaviour:
     m_Localized: Identity verification
     m_Metadata:
       m_Items: []
+  - m_Id: 4696560719994880
+    m_Localized: Tourniquet Application
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5131490675499008
+    m_Localized: 'Securing the strap: The measuring tape is fixed at the top position
+      using adhesive, with a length of 5 cm.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5131640709947392
+    m_Localized: Color Indicator
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5131712919085056
+    m_Localized: Tight
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5131707017699328
+    m_Localized: Suitable
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5131800764588032
+    m_Localized: Every second beyond the specified minute results in a deduction
+      of two points.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5131874303320064
+    m_Localized: "Choosing the Ideal Vein\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5132021288509440
+    m_Localized: "Identifying veins using an AR layer:\r\nGreen = Median Cubital
+      Vein\r\nYellow = Cephalic Vein\r\r\nOrange = Basilic Vein\r\n\nAlways start
+      with the median vein, as it is the most stable and has the best blood flow."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5132182987317248
+    m_Localized: 15 points will be deducted after the first unsuccessful additional
+      attempt.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5133785240805376
+    m_Localized: Butterfly Needle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5133822951792640
+    m_Localized: Vacutainer Needle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5133264102727680
+    m_Localized: Choosing the Appropriate Needle Size
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5133645788585984
+    m_Localized: 'The Vacutainer kit includes needles in two sizes: 21G and 23G.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5133764197982208
+    m_Localized: Butterfly needles are available in sizes ranging from 23G to 25G.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5133405807288320
+    m_Localized: 'The vein diameter is determined using a small window on the arm,
+      which displays the flow rate (fragile / fine / medium).
+
+      The needle type
+      must be selected based on the vein size before inserting it into the Vacutainer
+      holder.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5133591858225152
+    m_Localized: Incorrect selection leads to blood backflow and poor flow, resulting
+      in a deduction of 25 points and requiring a retry.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
