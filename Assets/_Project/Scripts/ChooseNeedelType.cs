@@ -1,18 +1,28 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class ChooseNeedelType : MonoBehaviour
+public class ChooseNeedleType: MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] public NeedleType needleType;
+
+    private void Start()
     {
-        
+        needleType = NeedleType.None;
     }
 
-    // Update is called once per frame
-    void Update()
+    [Button]
+    public void ChooseNeedle(NeedleType _needleType)
     {
-        
+        needleType = _needleType;
     }
+}
+
+public enum NeedleType
+{
+    Vacutainer,
+    Butterfly,
+    None
 }
