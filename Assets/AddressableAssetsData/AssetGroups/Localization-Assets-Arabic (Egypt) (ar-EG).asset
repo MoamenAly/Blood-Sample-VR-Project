@@ -23,6 +23,90 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-ar-EG
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8c2c9b81a93324748b490ac18d837bd4
+    m_Address: "\u062A\u0623\u0643\u062F \u0645\u0646 \u062C\u0627\u0647\u0632\u064A\u0629"
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ar-EG
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3123a9c4d3d37d64a93f89f3731d6fa1
+    m_Address: "\u0642\u0645 \u0628\u0627\u0631\u062A\u062F\u0627\u0621 \u0645\u0639\u062F\u0627\u062A"
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ar-EG
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: efed97bd99bceb64a9d7733c78eb78e8
+    m_Address: "\u0627\u062C\u0645\u0639 \u0627\u0644\u0639\u0646\u0627\u0635\u0631 "
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ar-EG
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1d7d3d997a5899a4084b209ffe14e6fa
+    m_Address: "\u0642\u0645 \u0628\u0633\u062D\u0628 \u0627\u0644\u0628\u0637\u0627\u0642\u0647 "
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ar-EG
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 22a2060ae19843848a2318326dfa8ff7
+    m_Address: "\u0644\u0641 \u0627\u0644\u062A\u0648\u0631\u0646\u0643\u064A\u0647"
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ar-EG
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d01cbc87c9b093442a8351c5e8334ebe
+    m_Address: "\u0627\u064F\u0646\u0652\u0638\u064F\u0631\u0652 \u0625\u0650\u0644\u064E\u0649
+      \u0630\u0650\u0631\u064E\u0627\u0639\u0650"
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ar-EG
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 012670f7d493f8a41a3c27825447e26d
+    m_Address: "\u0627\u062E\u0652\u062A\u064E\u0631\u0652 \u062D\u064E\u062C\u0652\u0645\u064E
+      \u0627\u0644\u0625\u0650\u0628\u0652\u0631\u064E\u0629\u0650 \u0627\u0644\u0645\u064F\u0646\u064E\u0627\u0633\u0650\u0628\u064E."
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ar-EG
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a507a56eba6241648aeaad352c1185ad
+    m_Address: "\u0623\u064E\u062F\u0652\u062E\u0650\u0644\u0650 \u0627\u0644\u0625\u0650\u0628\u0652\u0631\u064E\u0629\u064E."
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ar-EG
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f8ebc54f0e9ae0c43b61c39242634c65
+    m_Address: "\u0627\u0650\u0645\u0652\u0632\u0650\u062C\u0650 \u0627\u0644\u0623\u064E\u0646\u064E\u0627\u0628\u0650\u064A\u0628\u064E
+      \u0628\u064E\u0639\u0652\u062F\u064E \u0627\u0644\u0633\u0651\u064E\u062D\u0652\u0628\u0650."
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ar-EG
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1c79d622a0035e743a7ed052b3cf288e
+    m_Address: "\u0647\u064E\u0630\u064E\u0627 \u0647\u064F\u0648\u064E \u0627\u0644\u062A\u0651\u064E\u0631\u0652\u062A\u0650\u064A\u0628\u064F
+      \u0627\u0644\u0635\u0651\u064E\u062D\u0650\u064A\u062D\u064F \u0644\u0650\u0625\u0650\u0632\u064E\u0627\u0644\u064E\u0629\u0650
+      \u0627\u0644\u0623\u064E\u062F\u064E\u0648\u064E\u0627\u062A\u0650 \u0639\u0650\u0646\u062F\u064E
+      \u0627\u0644\u0625\u0650\u0646\u0652\u062A\u0650\u0647\u064E\u0627\u0621\u0650"
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ar-EG
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 31f630c4aae9d6b4d9b30bb8319ea8ea
+    m_Address: "\u0642\u064F\u0645\u0652 \u0628\u0650\u0644\u064E\u0635\u0652\u0642\u0650
+      \u0627\u0644\u0645\u064F\u0644\u0652\u0635\u064E\u0642\u0650 \u0639\u064E\u0644\u064E\u0649
+      \u0627\u0644\u0623\u064F\u0646\u0652\u0628\u064F\u0648\u0628\u0650."
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ar-EG
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3ae3702dea7427c49a9762ec75e611cf
+    m_Address: "\u0642\u064F\u0645\u0652 \u0628\u0650\u0646\u064E\u0632\u0652\u0639\u0650
+      \u0645\u064E\u0639\u064E\u062F\u0651\u064E\u0627\u062A\u0650 \u0627\u0644\u0648\u0650\u0642\u064E\u0627\u064A\u064E\u0629\u0650
+      \u0627\u0644\u0634\u0651\u064E\u062E\u0652\u0635\u0650\u064A\u0651\u064E\u0629\u0650
+      \u0628\u0650\u0627\u0644\u062A\u0651\u064E\u0631\u0652\u062A\u0650\u064A\u0628\u0650
+      \u0627\u0644\u0635\u0651\u064E\u062D\u0650\u064A\u062D\u0650"
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ar-EG
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: e5874f3717d398d4ba3a714bfb945fd7, type: 2}
   m_SchemaSet:

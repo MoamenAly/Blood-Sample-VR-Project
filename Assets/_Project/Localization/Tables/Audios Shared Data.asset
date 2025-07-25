@@ -19,6 +19,54 @@ MonoBehaviour:
     m_Key: Welcome
     m_Metadata:
       m_Items: []
+  - m_Id: 3152370073137152
+    m_Key: makesure
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3163041456254976
+    m_Key: wearequipment
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3163418310275072
+    m_Key: collecttools
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3163788256276480
+    m_Key: checkidentity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3164232001056768
+    m_Key: puttorique
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3164638626246656
+    m_Key: ' choose the ideal vein'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3164900673777664
+    m_Key: selectrightneedleSize
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3165114709110784
+    m_Key: inserttheneedle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3165290374950912
+    m_Key: mixthetubes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3165555211694080
+    m_Key: correctordertoremoveequipment
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3165831662465024
+    m_Key: attachthelabel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3166039674777600
+    m_Key: ' Remove your protective equipment in the correct order'
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items:
     - rid: 1350229444260003840
@@ -35,6 +83,54 @@ MonoBehaviour:
           m_TableCodes:
           - ar-EG
           - en
+        - m_KeyId: 3152370073137152
+          m_TableCodes:
+          - en
+          - ar-EG
+        - m_KeyId: 3163041456254976
+          m_TableCodes:
+          - en
+          - ar-EG
+        - m_KeyId: 3163418310275072
+          m_TableCodes:
+          - en
+          - ar-EG
+        - m_KeyId: 3163788256276480
+          m_TableCodes:
+          - en
+          - ar-EG
+        - m_KeyId: 3164232001056768
+          m_TableCodes:
+          - en
+          - ar-EG
+        - m_KeyId: 3164638626246656
+          m_TableCodes:
+          - en
+          - ar-EG
+        - m_KeyId: 3164900673777664
+          m_TableCodes:
+          - en
+          - ar-EG
+        - m_KeyId: 3165114709110784
+          m_TableCodes:
+          - en
+          - ar-EG
+        - m_KeyId: 3165290374950912
+          m_TableCodes:
+          - en
+          - ar-EG
+        - m_KeyId: 3165555211694080
+          m_TableCodes:
+          - en
+          - ar-EG
+        - m_KeyId: 3165831662465024
+          m_TableCodes:
+          - en
+          - ar-EG
+        - m_KeyId: 3166039674777600
+          m_TableCodes:
+          - en
+          - ar-EG
         m_TypeString: UnityEngine.AudioClip, UnityEngine.AudioModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
     - rid: 2051435091811106818

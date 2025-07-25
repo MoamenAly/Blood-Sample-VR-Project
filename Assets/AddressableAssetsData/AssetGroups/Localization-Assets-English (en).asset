@@ -23,6 +23,78 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e990dc9e1bdff6948ae3a5706fbd974a
+    m_Address: Make sure your environmen 1
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a9d5b27b5154deb41a270313ed1176c9
+    m_Address: Wear your protective equi 1
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c04c4e1d3ff0405448b40dcf59cd9e05
+    m_Address: Collect the eight items w 2
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e969264df1219ac439a1cf67a3dda99f
+    m_Address: Take the patient-s ID car 2
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c9893c4a7b7579548b72df26e6c58579
+    m_Address: Wrap the tourniquet aroun 1
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3c6dda074b3d58f4ea8629431f434081
+    m_Address: Look at the patient-s arm 1
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8acdf895201ab2f459364f7fb34d0f89
+    m_Address: _Select the appropriate 1
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f6b1ddfb6ea7f95479870c06e5247b72
+    m_Address: Insert the needle 1
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 991914379ed14b740803ec03e77e8057
+    m_Address: Mix the tubes after the d 1
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f1c0d1119364fca47871dc7eaccecb1d
+    m_Address: This is the correct order 1
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1f14502629ee83940b48965305a4f186
+    m_Address: Attach the label to the t 1
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 48a9ea928b6396748aa36ff4fe381d50
+    m_Address: _Remove your protective 1
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: e5874f3717d398d4ba3a714bfb945fd7, type: 2}
   m_SchemaSet:
