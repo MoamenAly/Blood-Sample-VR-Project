@@ -21,23 +21,24 @@ MonoBehaviour:
       m_Items: []
   m_Metadata:
     m_Items:
-    - rid: 2051435091811106819
+    - rid: 1350229444260003840
   m_KeyGenerator:
     rid: 2051435091811106818
   references:
     version: 2
     RefIds:
-    - rid: 2051435091811106818
-      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables,
-        asm: Unity.Localization}
-      data:
-        m_CustomEpoch: 1752697282163
-    - rid: 2051435091811106819
+    - rid: 1350229444260003840
       type: {class: AssetTypeMetadata, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
         m_Entries:
         - m_KeyId: 7040245760
           m_TableCodes:
           - ar-EG
+          - en
         m_TypeString: UnityEngine.AudioClip, UnityEngine.AudioModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
+    - rid: 2051435091811106818
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables,
+        asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1752697282163
