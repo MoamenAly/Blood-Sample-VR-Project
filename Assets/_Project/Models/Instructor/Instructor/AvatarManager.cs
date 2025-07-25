@@ -1,8 +1,9 @@
-using Sirenix.OdinInspector;
+﻿using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Localization;
 
 public class AvatarManager : MonoBehaviour
 {
@@ -49,14 +50,24 @@ public class AvatarManager : MonoBehaviour
                 currentIndex = i;
             }
         }
-        steps[currentIndex].OnStart.Invoke();
+        steps[currentIndex].localizedClip.LoadAssetAsync().Completed += handle =>
+        {
+            if (handle.Status == UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationStatus.Succeeded)
+            {
+                AudioClip clip = handle.Result;
+                audioSource.clip = clip;
+                audioSource.Play();
 
-        audioSource.clip = steps[currentIndex].audioClip;
-        audioSource.Play();
+                PlayAnimation();
 
-        PlayAnimation();
+                Invoke(nameof(OnClipFinished), clip.length + timeOnFinishStep);
+            }
+            else
+            {
+                Debug.LogError($"Failed to load localized audio for step: {steps[currentIndex].stepName}");
+            }
+        };
 
-        Invoke("OnClipFinished", steps[currentIndex].audioClip.length + timeOnFinishStep);
     }
 
 
@@ -86,8 +97,10 @@ public class AvatarManager : MonoBehaviour
     public class Step
     {
         public string stepName;
+
         [Space]
-        public AudioClip audioClip;
+        public LocalizedAudioClip localizedClip; 
+
         [Space]
         public UnityEvent2 OnStart;
         [Space]
