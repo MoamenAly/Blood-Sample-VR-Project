@@ -140,6 +140,24 @@ MonoBehaviour:
       confirms that the needle is correctly positioned inside the vein."
     m_Metadata:
       m_Items: []
+  - m_Id: 5410101177458688
+    m_Localized: Order of Draw
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5411382952566784
+    m_Localized: Mixing Tubes After Blood Collection
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5411759068389376
+    m_Localized: 'Tubes must be gently mixed immediately after blood collection by
+      inverting them several times (not by vigorous shaking).
+
+
+      Improper mixing
+      or vigorous shaking may cause the sample to clot due to insufficient control
+      over the distribution of the additive inside the tube.'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
