@@ -14,13 +14,7 @@ public class SnapZoneCheck : MonoBehaviour
     void Start()
     {
         snapZone = GetComponent<SnapZone>();
-        if (snapZone != null && snapZone.OnlyAllowNames != null)
-        {
-            foreach (var item in snapZone.OnlyAllowNames)
-            {
-                allowNames.Add(item);
-            }
-        }
+        FillAllowNames();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -32,6 +26,24 @@ public class SnapZoneCheck : MonoBehaviour
                 sfx.PlayOneShot(wrongClip);
             }
         }
+    }
+
+    private void FillAllowNames()
+    {
+        if (snapZone != null && snapZone.OnlyAllowNames != null)
+        {
+            foreach (var item in snapZone.OnlyAllowNames)
+            {
+                allowNames.Add(item);
+            }
+        }
+    }
+
+    public void ChangeAllowNames(string newName)
+    {
+        snapZone.OnlyAllowNames.Clear();
+        snapZone.OnlyAllowNames.Add(newName);
+        FillAllowNames();
     }
 
 }

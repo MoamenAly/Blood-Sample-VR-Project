@@ -96,13 +96,17 @@ public class AvatarManager : MonoBehaviour
     [System.Serializable]
     public class Step
     {
+        [FoldoutGroup("Step")]
         public string stepName;
 
+        [FoldoutGroup("Step")]
         [Space]
         public LocalizedAudioClip localizedClip; 
 
+        [FoldoutGroup("Step")]
         [Space]
         public UnityEvent2 OnStart;
+        [FoldoutGroup("Step")]
         [Space]
         public UnityEvent2 OnEnd;
     }
