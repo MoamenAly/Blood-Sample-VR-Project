@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8deea710-3fd8-472a-a9bf-cee73947c874" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Blood-Sample-VR-Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Blood-Sample-VR-Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/OperationRoom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/OperationRoom.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/TubeRotationTracker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/TubeRotationTracker.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Templete/Scripts/CustomEditorWindow/EnumWindow/EnumFolder/Menus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Templete/Scripts/CustomEditorWindow/EnumWindow/EnumFolder/Menus.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/TubesManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/TubesManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +96,7 @@
       <updated>1753374254399</updated>
       <workItem from="1753374254602" duration="7848000" />
       <workItem from="1753446767632" duration="1626000" />
-      <workItem from="1753476387337" duration="5926000" />
+      <workItem from="1753476387337" duration="6408000" />
     </task>
     <servers />
   </component>

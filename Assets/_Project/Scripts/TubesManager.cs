@@ -14,6 +14,7 @@ public class TubesManager : MonoBehaviour
     [SerializeField] float fillDuration = 1.5f;
     private SnapZone _tubeSnapZone;
     private SnapZoneCheck _snapZoneCheck;
+    private GameObject _highlightTube;
     [SerializeField] int currentIndex;
     private int _maxTubes;
 
@@ -26,6 +27,7 @@ public class TubesManager : MonoBehaviour
     {
         _tubeSnapZone = zone;
         _snapZoneCheck = _tubeSnapZone.GetComponent<SnapZoneCheck>();
+        _highlightTube = _tubeSnapZone.transform.GetChild(0).gameObject;
         if (currentIndex < _maxTubes)
         {
             Tube tube = tubes[currentIndex];
@@ -50,6 +52,10 @@ public class TubesManager : MonoBehaviour
         }
     }
 
+    public void OpenHighlightTube()
+    {
+        _highlightTube.SetActive(true);
+    }
 
     [Serializable]
     public class Tube
