@@ -10,5 +10,12 @@ public enum Menus
 	 IdentityScreen,
 	 Tornkey,
 	 WareedTest,
-	 ChoosingNeedle
+	 ChoosingNeedle,
+	 EnterNeedle,
+	 Tubes,
+	 TubesMixture,
+	 FinsihOrder,
+	 TubesSticker,
+	 Rate,
+	 RemoveSafety
 }
