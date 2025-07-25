@@ -127,6 +127,78 @@ MonoBehaviour:
     m_Key: EnterNeedleDescrip
     m_Metadata:
       m_Items: []
+  - m_Id: 5410101177458688
+    m_Key: TubesOrderTitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5411382952566784
+    m_Key: TubesMixtureTitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5411759068389376
+    m_Key: TubesMixtureDescrip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5412877395664896
+    m_Key: FinishOrderTitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5412999605100544
+    m_Key: FinishOrder1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5413280455696384
+    m_Key: FinishOrder2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5413308075188224
+    m_Key: FinishOrder3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5413348265009152
+    m_Key: FinishOrderGuid
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5414616526069760
+    m_Key: TubeStickerTitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5414682959650816
+    m_Key: TubeStickerDescrip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5414704946192384
+    m_Key: TubeStickerGuid
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5416037182971904
+    m_Key: RateTitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5416070536077312
+    m_Key: PatientRate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5416103381671936
+    m_Key: SampleValidity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5416308101455872
+    m_Key: AgainSample
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5420335539265536
+    m_Key: RemoveSafetyTitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5420510764703744
+    m_Key: RemoveSafetyDescrip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5420761546334208
+    m_Key: RemoveSafetyGuid
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
