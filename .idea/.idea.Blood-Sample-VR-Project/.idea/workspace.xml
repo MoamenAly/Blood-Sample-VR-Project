@@ -6,14 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="8deea710-3fd8-472a-a9bf-cee73947c874" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Blood-Sample-VR-Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Blood-Sample-VR-Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BG/Alcohol Pad/Alcohol Pad.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BG/Alcohol Pad/Alcohol Pad.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/ArabicFont.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/ArabicFont.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Localization/Tables/Steps Shared Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Localization/Tables/Steps Shared Data.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Localization/Tables/Steps_ar-EG.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Localization/Tables/Steps_ar-EG.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Localization/Tables/Steps_en.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Localization/Tables/Steps_en.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blood transfusion station - hospital/Blood transfusion station - hospital/models/Materials/cap.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blood transfusion station - hospital/Blood transfusion station - hospital/models/Materials/cap.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blood transfusion station - hospital/Blood transfusion station - hospital/models/Materials/test_tube.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blood transfusion station - hospital/Blood transfusion station - hospital/models/Materials/test_tube.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/Tools/01/armo1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Models/Tools/01/armo1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/Tools/01/butterfly needle_2 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Models/Tools/01/butterfly needle_2 1.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/OperationRoom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/OperationRoom.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Templete/Scripts/CustomEditorWindow/EnumWindow/EnumFolder/Elements.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Templete/Scripts/CustomEditorWindow/EnumWindow/EnumFolder/Elements.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/NeedleManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/NeedleManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +20,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/MaterialTilingTween.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo"><![CDATA[{
@@ -98,7 +99,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1753374254399</updated>
-      <workItem from="1753374254602" duration="5094000" />
+      <workItem from="1753374254602" duration="7848000" />
     </task>
     <servers />
   </component>
