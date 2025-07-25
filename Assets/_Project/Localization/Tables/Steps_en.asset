@@ -158,6 +158,72 @@ MonoBehaviour:
       over the distribution of the additive inside the tube.'
     m_Metadata:
       m_Items: []
+  - m_Id: 5412877395664896
+    m_Localized: Termination Sequence
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5412999605100544
+    m_Localized: 'First: Remove the tourniquet'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5413280455696384
+    m_Localized: 'Second: Remove the tube'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5413308075188224
+    m_Localized: 'Finally: Dispose of the needle'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5413348265009152
+    m_Localized: Any mistake in the order will trigger a red warning light, and 40
+      points will be deducted from the final score.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5414616526069760
+    m_Localized: Labeling the Tube
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5414682959650816
+    m_Localized: Apply the label straight on the tube, ensuring its center aligns
+      exactly with the visible centerline on the tube.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5414704946192384
+    m_Localized: Incorrect label placement will result in a 10-point deduction from
+      the quality score.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5416037182971904
+    m_Localized: Performance Report with Patient Satisfaction and Sample Validity
+      Indicators
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5416070536077312
+    m_Localized: 'Patient Satisfaction:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5416103381671936
+    m_Localized: 'Sample Validity:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5416308101455872
+    m_Localized: Try Again
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5420335539265536
+    m_Localized: Removing Personal Protective Equipment (PPE) After Completion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5420510764703744
+    m_Localized: "Don\u2019t forget to remove the PPE in the correct sequence.\n\nRequired
+      Order:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5420761546334208
+    m_Localized: Each item must be disposed of immediately after removal in the red
+      medical waste container.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
