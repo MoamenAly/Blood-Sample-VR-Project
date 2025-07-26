@@ -199,6 +199,10 @@ MonoBehaviour:
     m_Key: RemoveSafetyGuid
     m_Metadata:
       m_Items: []
+  - m_Id: 5830705974190080
+    m_Key: Score
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

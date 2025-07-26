@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using RTLTMPro;
+using UnityEngine.Events;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Components;
 public class SafteyManager : MonoSinglton<SafteyManager>
@@ -14,9 +15,7 @@ public class SafteyManager : MonoSinglton<SafteyManager>
     [SerializeField] private LocalizedString SafteyWaring;
     [SerializeField] private AudioSource wrongsource;
     [SerializeField] private LocalizeStringEvent warningText;
-
-
-
+    [SerializeField] private UnityEvent2 OnSuccess;
 
     private void Start()
     {
@@ -27,7 +26,7 @@ public class SafteyManager : MonoSinglton<SafteyManager>
         Items.Add(item);
     }
 
-public    int NextItemOrderTotake = 1;
+public int NextItemOrderTotake = 1;
 
     public void CheckSaftey(OrderItem item)
     {
@@ -37,6 +36,7 @@ public    int NextItemOrderTotake = 1;
             print("Takee it"); /// sunscribe to ui manager
 
             item.OnTakeitemSucces();
+            Success();
             if (NextItemOrderTotake > Items.Count + 1)  return;
         }
         else
@@ -52,10 +52,17 @@ public    int NextItemOrderTotake = 1;
     IEnumerator ShowSafteyWarning()
     {
         warningText.gameObject.SetActive(true);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         warningText.gameObject.SetActive(false);
     }
 
+    public void Success()
+    {
+        if (NextItemOrderTotake >= Items.Count)
+        {
+            OnSuccess?.Invoke();
+        }
+    }
 
     public void INCREASEiNDEX()
     {

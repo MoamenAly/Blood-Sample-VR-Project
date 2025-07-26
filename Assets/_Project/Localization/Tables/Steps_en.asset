@@ -23,11 +23,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3589894985805824
-    m_Localized: Wearing  protective equipment
+    m_Localized: Wearing protective equipment
     m_Metadata:
       m_Items: []
   - m_Id: 3593672866721792
-    m_Localized: Follow the safe dressing sequenc
+    m_Localized: Follow the safe dressing sequence
     m_Metadata:
       m_Items: []
   - m_Id: 3598964446785536
@@ -222,6 +222,10 @@ MonoBehaviour:
   - m_Id: 5420761546334208
     m_Localized: Each item must be disposed of immediately after removal in the red
       medical waste container.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5830705974190080
+    m_Localized: Score
     m_Metadata:
       m_Items: []
   references:

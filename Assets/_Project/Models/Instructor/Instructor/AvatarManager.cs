@@ -1,4 +1,5 @@
-﻿using Sirenix.OdinInspector;
+﻿using System;
+using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,20 +24,10 @@ public class AvatarManager : MonoBehaviour
 
     int currentIndex = 0;
 
-    //public void PlayStep(int index)
-    //{
-    //    CancelInvoke();
-
-    //    currentIndex = index;
-    //    audioSource.clip = steps[currentIndex].audioClip;
-    //    audioSource.Play();
-
-
-    //    PlayAnimation();
-
-    //    Invoke("OnClipFinished", steps[currentIndex].audioClip.length + timeOnFinishStep);
-    //}
-
+    public void Start()
+    {
+        //PlayStep(steps[currentIndex].stepName);
+    }
 
     [Button]
     public void PlayStep(string _Name)

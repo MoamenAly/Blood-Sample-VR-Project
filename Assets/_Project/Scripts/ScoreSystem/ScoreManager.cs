@@ -10,7 +10,7 @@ using UnityEngine.Events;
 public class ScoreManager : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI scoreTxt;
-    [SerializeField] int maxScore;
+    //[SerializeField] int maxScore;
     [SerializeField] AudioSource sfxSource;
     [SerializeField] AudioClip increaseScoreClip;
     [SerializeField] AudioClip decreaseScoreClip;
@@ -22,15 +22,15 @@ public class ScoreManager : MonoBehaviour
 
     private void Start()
     {
-        currentScore = int.Parse(scoreTxt.text);
+        SetScore();
     }
 
     [Button]
     public void IncreaseScore(int amountScore)
     {
-        if (currentScore >= maxScore) return;
+        //if (currentScore >= maxScore) return;
 
-        int targetScore = Mathf.Min(currentScore + amountScore, maxScore);
+        int targetScore = currentScore + amountScore;
 
         DOTween.To(() => currentScore, x =>
         {
@@ -42,6 +42,7 @@ public class ScoreManager : MonoBehaviour
             sfxSource.PlayOneShot(increaseScoreClip);
 
         OnIncreasedScore?.Invoke();
+        ScoreDataHolder.score = targetScore;
     }
 
     [Button]
@@ -61,6 +62,13 @@ public class ScoreManager : MonoBehaviour
             sfxSource.PlayOneShot(decreaseScoreClip);
 
         OnDecreasedScore?.Invoke();
+        ScoreDataHolder.score = targetScore;
 
+    }
+
+    public void SetScore()
+    {
+        currentScore = ScoreDataHolder.score;
+        scoreTxt.text = ScoreDataHolder.score.ToString();
     }
 }
