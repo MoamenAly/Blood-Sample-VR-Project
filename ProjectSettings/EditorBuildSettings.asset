@@ -10,10 +10,10 @@ EditorBuildSettings:
     guid: 20c0402700a8521488130ae634cdfa0b
   - enabled: 1
     path: Assets/_Project/Scenes/FasedRoom.unity
-    guid: 16112a19809667346a2257843103bd18
+    guid: b43ef900d12f81649b4ea63d061c1b3e
   - enabled: 1
     path: Assets/_Project/Scenes/Safety.unity
-    guid: e2056d16f8f855546879942f1b53d7b9
+    guid: 58d51b03ad0b86944830cf61e8e97d92
   - enabled: 1
     path: Assets/_Project/Scenes/OperationRoom.unity
     guid: d43a7bbd8e99aaa468cdf6d50e78d7d0
