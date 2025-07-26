@@ -8,5 +8,6 @@ public enum Elements
 	Gloves,
 	Coat,
 	CoholCOllider,
-	WrongCollisionNeedle
+	WrongCollisionNeedle,
+    IndexFinger
 }
