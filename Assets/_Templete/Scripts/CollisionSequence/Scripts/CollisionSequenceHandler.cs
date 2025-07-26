@@ -27,7 +27,7 @@ namespace Scivr.CollisionSequence
 
         private void OnTriggerEnter(Collider other)
         {
-            Debug.Log("on trigger enter " + other.name);
+          //  Debug.Log("on trigger enter " + other.name);
             HandleCollision(other, CollisionType.OnTriggerEnter);
         }
 
@@ -38,7 +38,7 @@ namespace Scivr.CollisionSequence
 
         private void OnTriggerExit(Collider other)
         {
-            Debug.Log("on trigger exit " + other.name);
+          //  Debug.Log("on trigger exit " + other.name);
             HandleCollision(other, CollisionType.OnTriggerExit);
         }
 

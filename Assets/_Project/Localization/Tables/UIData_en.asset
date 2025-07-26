@@ -52,6 +52,10 @@ MonoBehaviour:
     m_Localized: Verify the sedation bracelet
     m_Metadata:
       m_Items: []
+  - m_Id: 1722883695505408
+    m_Localized: Take off
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

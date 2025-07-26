@@ -9,7 +9,7 @@ public class SafteyManager : MonoSinglton<SafteyManager>
 {
 
 
-    public List<SafteyItem> Items;
+    public List<OrderItem> Items;
 
     [SerializeField] private LocalizedString SafteyWaring;
     [SerializeField] private AudioSource wrongsource;
@@ -22,14 +22,14 @@ public class SafteyManager : MonoSinglton<SafteyManager>
     {
         warningText.gameObject.SetActive(false);
     }
-    public void SubscribeItem(SafteyItem item)
+    public void SubscribeItem(OrderItem item)
     {
         Items.Add(item);
     }
 
 public    int NextItemOrderTotake = 1;
 
-    public void CheckSaftey(SafteyItem item)
+    public void CheckSaftey(OrderItem item)
     {
       
         if(NextItemOrderTotake == item.Order)

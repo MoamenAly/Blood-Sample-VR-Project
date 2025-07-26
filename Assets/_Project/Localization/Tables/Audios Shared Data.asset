@@ -67,6 +67,10 @@ MonoBehaviour:
     m_Key: ' Remove your protective equipment in the correct order'
     m_Metadata:
       m_Items: []
+  - m_Id: 3462058127978496
+    m_Key: disambeaudio
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items:
     - rid: 1350229444260003840
@@ -128,6 +132,10 @@ MonoBehaviour:
           - en
           - ar-EG
         - m_KeyId: 3166039674777600
+          m_TableCodes:
+          - en
+          - ar-EG
+        - m_KeyId: 3462058127978496
           m_TableCodes:
           - en
           - ar-EG

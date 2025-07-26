@@ -49,6 +49,10 @@ MonoBehaviour:
     m_Key: sedation verification
     m_Metadata:
       m_Items: []
+  - m_Id: 1722883695505408
+    m_Key: remove
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

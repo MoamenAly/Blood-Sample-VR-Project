@@ -179,7 +179,12 @@ public class RestOnUnGrab : MonoBehaviour
             transform.position = defaultPosition + Vector3.up * 0.01f;
         }
     }
-
+     public void ImmediateReturn()
+    {
+        CancelInvoke(nameof(BackToDefaultPostion));
+        grabed = false;
+       BackToDefaultPostion();
+    }
 }
 
 public enum ResetState
