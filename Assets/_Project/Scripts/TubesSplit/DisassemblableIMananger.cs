@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Localization;
 
 public class DisassemblableIMananger : MonoSinglton<DisassemblableIMananger>
@@ -12,6 +13,9 @@ public class DisassemblableIMananger : MonoSinglton<DisassemblableIMananger>
     public LocalizedAudioClip localizedClip;
     [SerializeField] AudioClip succesAudio;
     public bool CanCheck = false;
+
+
+    [SerializeField] private UnityEvent2 OnAllSucess;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,8 +44,9 @@ public class DisassemblableIMananger : MonoSinglton<DisassemblableIMananger>
             print("Takee it"); /// sunscribe to ui manager
             audioSource.clip = succesAudio;
             audioSource.Play();
-
+            IncreasIndex();
             item.OnTakeitemSucces();
+            OnAllSucces();
             if (NextItemOrderTotake > items.Count + 1) return;
         }
         else
@@ -49,13 +54,17 @@ public class DisassemblableIMananger : MonoSinglton<DisassemblableIMananger>
 
             item.OnFailureItem();
             PlayAudio();
-            //StartCoroutine(ShowSafteyWarning());
-            //wrongsource.Play();
-            //warningText.StringReference = SafteyWaring;
+
 
         }
     }
-
+    private void IncreasIndex()
+    {
+        if(NextItemOrderTotake < items.Count)
+        {
+            NextItemOrderTotake++;
+        }
+    }
 
 
     public void PlayAudio()
@@ -73,6 +82,12 @@ public class DisassemblableIMananger : MonoSinglton<DisassemblableIMananger>
                 Debug.LogError($"Failed to load localized audio");
             }
         };
+    }
+
+    public void OnAllSucces()
+    {
+        if(NextItemOrderTotake >= items.Count)
+             OnAllSucess?.Invoke();
     }
    
 }

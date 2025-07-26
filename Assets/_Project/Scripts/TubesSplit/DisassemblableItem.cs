@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using BNG;
 using UnityEngine.Events;
+using UnityEngine.InputSystem.iOS;
+using VFolders.Libs;
 
 public class DisassemblableItem : MonoBehaviour
 {
@@ -44,10 +46,17 @@ public class DisassemblableItem : MonoBehaviour
 
 
         OnSucces?.Invoke();
+       // Invoke(nameof(DestoryOnScusse), 1f);
     }
 
     public void OnFailureItem()
     {
         onFailure?.Invoke();
+    }
+
+
+    void DestoryOnScusse()
+    {
+        gameObject.Destroy();
     }
 }
