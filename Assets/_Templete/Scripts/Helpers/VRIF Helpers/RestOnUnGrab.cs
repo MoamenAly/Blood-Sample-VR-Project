@@ -72,6 +72,7 @@ public class RestOnUnGrab : MonoBehaviour
 
     private void OnUnGrab()
     {
+        onUngrab?.Invoke();
         CancelInvoke(nameof(BackToDefaultPostion));
         grabed = false;
         Invoke(nameof(BackToDefaultPostion), 1.5f);

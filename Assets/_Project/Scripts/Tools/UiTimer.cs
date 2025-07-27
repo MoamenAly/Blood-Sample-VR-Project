@@ -11,6 +11,7 @@ public class UiTimer : MonoBehaviour
     [SerializeField]float duration;
 
     [SerializeField] UnityEvent2 OnFillFinished;
+    public UnityAction OnTimeFinishedAction;
     /// <summary>
     /// Call this function to start the fill for a duration in seconds
     /// </summary>
@@ -37,7 +38,14 @@ public class UiTimer : MonoBehaviour
         }
 
         OnFillFinished?.Invoke();
+        OnTimeFinishedAction?.Invoke();
         fillImage.fillAmount = 1f;
         fillCoroutine = null;
+    }
+
+    public void StopTimer()
+    {
+        fillCoroutine = null;
+        StopAllCoroutines();
     }
 }

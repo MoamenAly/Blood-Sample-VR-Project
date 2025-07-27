@@ -8,8 +8,10 @@ using UnityEngine.Localization;
 
 public class AvatarManager : MonoBehaviour
 {
-    [SerializeField] private AudioSource audioSource;
 
+    public bool runOnStart = false;
+   
+    [SerializeField] private AudioSource audioSource;
     [Space]
     public Animator avatarAnimator;
 
@@ -26,7 +28,12 @@ public class AvatarManager : MonoBehaviour
 
     public void Start()
     {
-        //PlayStep(steps[currentIndex].stepName);
+
+        if (runOnStart)
+        {
+            PlayStep(steps[currentIndex].stepName);
+
+        }
     }
 
     [Button]

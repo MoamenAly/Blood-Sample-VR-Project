@@ -32,6 +32,7 @@ public class ScoreManager : MonoBehaviour
 
         int targetScore = currentScore + amountScore;
 
+        Debug.LogError("currentScore" + currentScore + "targetScore " + targetScore);
         DOTween.To(() => currentScore, x =>
         {
             currentScore = x;
