@@ -1,4 +1,5 @@
 using BNG;
+using DG.Tweening;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Events;
@@ -175,7 +176,20 @@ public class RestOnUnGrab : MonoBehaviour
         }
 
     }
-    
+
+    public void ChangeOverrideTransform(Transform target)
+    {
+
+        overrideTransform = true;
+        DOVirtual.DelayedCall(0.1f, () =>
+        {
+            overrideTransform = target;
+
+        });
+ 
+
+    }
+
     //--------------------- Added for quiz -----------------------//
     public void ForceDefaultPosition()
     {

@@ -30,7 +30,10 @@ public class DisassemblableIMananger : MonoSinglton<DisassemblableIMananger>
     {
         
     }
-
+    public void SetAvailable(bool state)
+    {
+       CanCheck = state;
+    }
     public void Subscribe(DisassemblableItem item)
     {
         items.Add(item);
