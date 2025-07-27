@@ -123,6 +123,10 @@ namespace BNG {
                 HeldItem.enabled = true;   
             }
         }
+        
+        public void _CanRemoveItem() {
+           CanRemoveItem = true;
+        }
 
         void Update() {
 
