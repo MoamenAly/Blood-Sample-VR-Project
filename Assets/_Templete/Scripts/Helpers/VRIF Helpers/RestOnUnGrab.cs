@@ -32,7 +32,7 @@ public class RestOnUnGrab : MonoBehaviour
     [SerializeField] bool shouldRest = false;
     [ShowIf(nameof(shouldRest))]
 
-   public ChooseNeedleType chooseNeedleType;
+   private ChooseNeedleType chooseNeedleType;
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
@@ -161,8 +161,10 @@ public class RestOnUnGrab : MonoBehaviour
     }
 
     public void ChangeOverrideTransform(Transform vacutainerOverridePosition, Transform butterflyOverridePosition)
-    {
+    { 
+        chooseNeedleType = FindObjectOfType<ChooseNeedleType>();
         overrideTransform = true;
+        gameObject.GetComponent<Rigidbody>().isKinematic = true;
         if (chooseNeedleType.needleType == NeedleType.Vacutainer)
         {
             overrideedTransform =  vacutainerOverridePosition;
