@@ -22,6 +22,9 @@ MonoBehaviour:
     - 033d8a195e212bf408ebb8f38ed4e230
     - d43a7bbd8e99aaa468cdf6d50e78d7d0
     - e2056d16f8f855546879942f1b53d7b9
+    - 7f98ee7487399de4683e7423cf53a0f9
+    - 4bf504e76e4c8b74f96e419e4844efa0
+    - 7793a8054403e084788e27bceb53a55b
     values:
     - goDatas_byGlobalId:
         keys:
@@ -224,6 +227,15 @@ MonoBehaviour:
         values:
         - colorIndex: 0
           iconNameOrGuid: 
+    - goDatas_byGlobalId:
+        keys: []
+        values: []
+    - goDatas_byGlobalId:
+        keys: []
+        values: []
+    - goDatas_byGlobalId:
+        keys: []
+        values: []
     - goDatas_byGlobalId:
         keys: []
         values: []

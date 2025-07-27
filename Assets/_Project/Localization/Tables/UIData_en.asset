@@ -56,6 +56,11 @@ MonoBehaviour:
     m_Localized: Take off
     m_Metadata:
       m_Items: []
+  - m_Id: 1924095799304192
+    m_Localized: Make sure the environment is ready and that you have enough space
+      to move.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

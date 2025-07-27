@@ -15,8 +15,11 @@ EditorBuildSettings:
     path: Assets/_Project/Scenes/Safety.unity
     guid: 58d51b03ad0b86944830cf61e8e97d92
   - enabled: 1
-    path: Assets/_Project/Scenes/OperationRoom.unity
+    path: Assets/_Project/Scenes/PrepareTools.unity
     guid: d43a7bbd8e99aaa468cdf6d50e78d7d0
+  - enabled: 1
+    path: Assets/_Project/Scenes/OperationRoom.unity
+    guid: 7793a8054403e084788e27bceb53a55b
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 48987baa24de634439d083a48e0a9545,
       type: 2}
