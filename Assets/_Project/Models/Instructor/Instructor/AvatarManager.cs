@@ -58,6 +58,7 @@ public class AvatarManager : MonoBehaviour
                 Debug.LogError($"Failed to load localized audio for step: {steps[currentIndex].stepName}");
             }
         };
+        steps[currentIndex].OnStart?.Invoke();
 
     }
 
