@@ -2,11 +2,11 @@ using UnityEngine;
 using DG.Tweening;
 using Sirenix.OdinInspector;
 
-public class MaterialTransparencyTween : MonoBehaviour
+public class URPTransparencyTween : MonoBehaviour
 {
     [Header("Target Settings")]
     [SerializeField] private Renderer targetRenderer;
-    [SerializeField] [Range(0, 255)] private int targetAlphaByte = 160;
+    [SerializeField, Range(0, 255)] private int targetAlphaByte = 160;
     [SerializeField] private float duration = 1.5f;
 
     private Material material;
@@ -16,6 +16,7 @@ public class MaterialTransparencyTween : MonoBehaviour
         if (targetRenderer == null)
             targetRenderer = GetComponent<Renderer>();
 
+        // Clone instance
         material = targetRenderer.material;
         
     }
@@ -23,11 +24,13 @@ public class MaterialTransparencyTween : MonoBehaviour
     [Button]
     public void FadeToTargetAlpha()
     {
-        float alpha = targetAlphaByte / 255f;
+        float targetAlpha = targetAlphaByte / 255f;
         Color currentColor = material.color;
-        Color targetColor = new Color(currentColor.r, currentColor.g, currentColor.b, alpha);
+        Color targetColor = new Color(currentColor.r, currentColor.g, currentColor.b, targetAlpha);
 
+        material.color = new Color(currentColor.r, currentColor.g, currentColor.b, 1f); // Start fully opaque
         material.DOColor(targetColor, duration);
     }
+    
     
 }

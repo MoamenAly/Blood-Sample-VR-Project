@@ -32,7 +32,7 @@ public class RestOnUnGrab : MonoBehaviour
     [SerializeField] bool shouldRest = false;
     [ShowIf(nameof(shouldRest))]
 
-
+   public ChooseNeedleType chooseNeedleType;
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
@@ -160,6 +160,20 @@ public class RestOnUnGrab : MonoBehaviour
         }
     }
 
+    public void ChangeOverrideTransform(Transform vacutainerOverridePosition, Transform butterflyOverridePosition)
+    {
+        overrideTransform = true;
+        if (chooseNeedleType.needleType == NeedleType.Vacutainer)
+        {
+            overrideedTransform =  vacutainerOverridePosition;
+        }
+        else if (chooseNeedleType.needleType == NeedleType.Butterfly)
+        {
+            overrideedTransform = butterflyOverridePosition;
+        }
+
+    }
+    
     //--------------------- Added for quiz -----------------------//
     public void ForceDefaultPosition()
     {
