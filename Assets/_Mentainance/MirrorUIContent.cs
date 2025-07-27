@@ -13,24 +13,24 @@ public class MirrorUIContent : MonoBehaviour
 
     private void OnEnable()
     {
-        OnLangueUpdated(LanguageManager.Instance.ActiveLanguage.LanguageLayout);
+      //  OnLangueUpdated(LanguageManager.Instance.ActiveLanguage.LanguageLayout);
     }
 
 
     void Start()
     {
-        LanguageManager.Instance.OnLangugaesUpdated += OnLangueUpdated;
+      //  LanguageManager.Instance.OnLangugaesUpdated += OnLangueUpdated;
     }
 
-    private void OnLangueUpdated(LanguageLayout languageLayout)
-    {
-        if(languageLayout==LanguageLayout.RightToLeft)
-           Mirrior();
-        else
-            MirriorN();
+    //private void OnLangueUpdated(LanguageLayout languageLayout)
+    //{
+    //    if(languageLayout==LanguageLayout.RightToLeft)
+    //       Mirrior();
+    //    else
+    //        MirriorN();
 
 
-    }
+    //}
 
     void Mirrior() {
         TextMeshProUGUI[] childTransforms = GetComponentsInChildren<TextMeshProUGUI>(true);       
