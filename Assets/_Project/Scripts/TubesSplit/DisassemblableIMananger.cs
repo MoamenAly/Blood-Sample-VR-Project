@@ -63,7 +63,7 @@ public class DisassemblableIMananger : MonoSinglton<DisassemblableIMananger>
     }
     private void IncreasIndex()
     {
-        if(NextItemOrderTotake < items.Count)
+        if(NextItemOrderTotake <= items.Count)
         {
             NextItemOrderTotake++;
         }
@@ -89,7 +89,7 @@ public class DisassemblableIMananger : MonoSinglton<DisassemblableIMananger>
 
     public void OnAllSucces()
     {
-        if(NextItemOrderTotake >= items.Count)
+        if(NextItemOrderTotake > items.Count)
              OnAllSucess?.Invoke();
     }
    

@@ -181,9 +181,11 @@ public class RestOnUnGrab : MonoBehaviour
     {
 
         overrideTransform = true;
+        overrideedTransform = target;
+        ForceDefaultPosition();
         DOVirtual.DelayedCall(0.1f, () =>
         {
-            overrideTransform = target;
+          
 
         });
  
