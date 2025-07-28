@@ -1,54 +1,69 @@
 ﻿using System;
-using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
 
 public class AvatarManager : MonoBehaviour
 {
-
     public bool runOnStart = false;
-   
+
     [SerializeField] private AudioSource audioSource;
     [Space]
     public Animator avatarAnimator;
-
     [Space]
-    public List<Step> steps;  // List of audio clips to play
-
-
+    public List<Step> steps; // List of steps with localized audio
     [Space]
     public float timeOnFinishStep = 1.0f;
 
+    private int currentIndex = 0;
 
-
-    int currentIndex = 0;
-
-    public void Start()
+    private void Start()
     {
+        LocalizationSettings.SelectedLocaleChanged += OnLocaleChanged;
 
-        if (runOnStart)
+        if (runOnStart && steps.Count > 0)
         {
             PlayStep(steps[currentIndex].stepName);
+        }
+    }
 
+    private void OnDestroy()
+    {
+        LocalizationSettings.SelectedLocaleChanged -= OnLocaleChanged;
+    }
+
+    private void OnLocaleChanged(Locale locale)
+    {
+        Debug.Log("Locale changed to: " + locale.Identifier.Code);
+
+        if (audioSource.isPlaying)
+        {
+            StopStep(); // Stop old clip before playing the new one
+            PlayStep(steps[currentIndex].stepName);
         }
     }
 
     [Button]
-    public void PlayStep(string _Name)
+    public void PlayStep(string stepName)
     {
         CancelInvoke();
 
         for (int i = 0; i < steps.Count; i++)
         {
-            if (steps[i].stepName == _Name)
+            if (steps[i].stepName == stepName)
             {
                 currentIndex = i;
+                break;
             }
         }
-        steps[currentIndex].localizedClip.LoadAssetAsync().Completed += handle =>
+
+        var step = steps[currentIndex];
+
+        step.localizedClip.LoadAssetAsync().Completed += handle =>
         {
             if (handle.Status == UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationStatus.Succeeded)
             {
@@ -62,58 +77,44 @@ public class AvatarManager : MonoBehaviour
             }
             else
             {
-                Debug.LogError($"Failed to load localized audio for step: {steps[currentIndex].stepName}");
+                Debug.LogError($"Failed to load localized audio for step: {step.stepName}");
             }
         };
-        steps[currentIndex].OnStart?.Invoke();
 
+        step.OnStart?.Invoke();
     }
-
-
 
     [Button]
     public void PlayAnimation()
     {
-        print("Play animation");
-       avatarAnimator.SetBool("Talking", audioSource.isPlaying);
-        print("correct " + audioSource.isPlaying);
+        bool isPlaying = audioSource.isPlaying;
+        avatarAnimator.SetBool("Talking", isPlaying);
     }
 
-
-
-    void OnClipFinished()
-    { 
-        steps[currentIndex].OnEnd.Invoke();
-        PlayAnimation();
+    private void OnClipFinished()
+    {
+        steps[currentIndex].OnEnd?.Invoke();
+        PlayAnimation(); // Update animation status
     }
-
-
-
 
     public void StopStep()
     {
-        // Cancel any pending method calls
         CancelInvoke();
 
-        // Stop audio playback
         if (audioSource.isPlaying)
         {
             audioSource.Stop();
         }
 
-        // Stop animation (set Talking to false)
         if (avatarAnimator != null)
         {
             avatarAnimator.SetBool("Talking", false);
         }
 
-        // Optionally: invoke OnEnd manually if needed
         steps[currentIndex].OnEnd?.Invoke();
     }
 
-
-
-    [System.Serializable]
+    [Serializable]
     public class Step
     {
         [FoldoutGroup("Step")]
@@ -121,11 +122,12 @@ public class AvatarManager : MonoBehaviour
 
         [FoldoutGroup("Step")]
         [Space]
-        public LocalizedAudioClip localizedClip; 
+        public LocalizedAudioClip localizedClip;
 
         [FoldoutGroup("Step")]
         [Space]
         public UnityEvent2 OnStart;
+
         [FoldoutGroup("Step")]
         [Space]
         public UnityEvent2 OnEnd;

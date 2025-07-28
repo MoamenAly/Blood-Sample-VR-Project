@@ -83,19 +83,6 @@ public class LocalizationManager : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Y))
-        {
-            StartCoroutine(SetLocale(1));
-        }
-
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-            StartCoroutine(SetLocale(0));
-        }
-    }
-
     [Button]
     [ShowIf("isUseDropdown")]
     public void ChangeLocale(int localeID)

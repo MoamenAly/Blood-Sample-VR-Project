@@ -6,12 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="8deea710-3fd8-472a-a9bf-cee73947c874" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Blood-Sample-VR-Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Blood-Sample-VR-Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BNG Framework/Materials/Glow 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BNG Framework/Materials/Glow 1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BNG Framework/Scripts/Core/SnapZone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BNG Framework/Scripts/Core/SnapZone.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Localization/Tables/UIData_ar-EG.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Localization/Tables/UIData_ar-EG.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Localization/Tables/UIData_en.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Localization/Tables/UIData_en.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/OperationRoom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/OperationRoom.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/TubesSplit/DisassemblableIMananger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/TubesSplit/DisassemblableIMananger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/Instructor/Instructor/AvatarManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Models/Instructor/Instructor/AvatarManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Intro.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/Intro.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/LocalizationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/LocalizationManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +105,7 @@
       <workItem from="1753552923018" duration="3142000" />
       <workItem from="1753572229725" duration="80000" />
       <workItem from="1753646745343" duration="2202000" />
-      <workItem from="1753720382761" duration="6796000" />
+      <workItem from="1753720382761" duration="7268000" />
     </task>
     <servers />
   </component>
