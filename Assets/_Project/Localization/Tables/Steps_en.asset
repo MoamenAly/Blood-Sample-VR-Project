@@ -64,7 +64,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 5131640709947392
-    m_Localized: Color Indicator
+    m_Localized: 'Color Indicator:'
     m_Metadata:
       m_Items: []
   - m_Id: 5131712919085056
@@ -136,7 +136,7 @@ MonoBehaviour:
   - m_Id: 5143370471153664
     m_Localized: "The needle should be inserted at an angle between 15\u201330\xB0
       to ensure proper contact with the muscle.\nThe red color is used as an indicator
-      of reaching the correct depth.\nThe appearance of a slight blood flashback
+      of reaching the correct depth.\n\nThe appearance of a slight blood flashback
       confirms that the needle is correctly positioned inside the vein."
     m_Metadata:
       m_Items: []

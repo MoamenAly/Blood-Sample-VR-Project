@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8deea710-3fd8-472a-a9bf-cee73947c874" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Blood-Sample-VR-Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Blood-Sample-VR-Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/Instructor/Instructor/AvatarManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Models/Instructor/Instructor/AvatarManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Intro.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/Intro.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/LocalizationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/LocalizationManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Localization/Tables/Steps_ar-EG.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Localization/Tables/Steps_ar-EG.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Localization/Tables/Steps_en.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Localization/Tables/Steps_en.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/OperationRoom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/OperationRoom.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +21,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/MaterialTilingTween.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/ScoreDataHolder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.7/Scripts/Runtime/TMPro_UGUI_Private.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Image.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -105,7 +105,7 @@
       <workItem from="1753552923018" duration="3142000" />
       <workItem from="1753572229725" duration="80000" />
       <workItem from="1753646745343" duration="2202000" />
-      <workItem from="1753720382761" duration="7268000" />
+      <workItem from="1753720382761" duration="7889000" />
     </task>
     <servers />
   </component>
