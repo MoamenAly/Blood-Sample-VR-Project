@@ -32,6 +32,13 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 42165add1d9339742a151ea07f7bdfc2
+    m_Address: videosound
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ar-EG
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: e5874f3717d398d4ba3a714bfb945fd7, type: 2}
   m_SchemaSet:

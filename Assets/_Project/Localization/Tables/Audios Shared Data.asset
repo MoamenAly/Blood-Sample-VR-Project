@@ -71,6 +71,10 @@ MonoBehaviour:
     m_Key: disambeaudio
     m_Metadata:
       m_Items: []
+  - m_Id: 4217502861684736
+    m_Key: video
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items:
     - rid: 1350229444260003840
@@ -139,6 +143,10 @@ MonoBehaviour:
           m_TableCodes:
           - en
           - ar-EG
+        - m_KeyId: 4217502861684736
+          m_TableCodes:
+          - ar-EG
+          - en
         m_TypeString: UnityEngine.AudioClip, UnityEngine.AudioModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
     - rid: 2051435091811106818

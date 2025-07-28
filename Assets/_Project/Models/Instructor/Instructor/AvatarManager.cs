@@ -88,8 +88,29 @@ public class AvatarManager : MonoBehaviour
     }
 
 
-  
-    
+
+
+    public void StopStep()
+    {
+        // Cancel any pending method calls
+        CancelInvoke();
+
+        // Stop audio playback
+        if (audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
+
+        // Stop animation (set Talking to false)
+        if (avatarAnimator != null)
+        {
+            avatarAnimator.SetBool("Talking", false);
+        }
+
+        // Optionally: invoke OnEnd manually if needed
+        steps[currentIndex].OnEnd?.Invoke();
+    }
+
 
 
     [System.Serializable]
