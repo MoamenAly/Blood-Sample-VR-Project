@@ -3314,6 +3314,21 @@ MonoBehaviour:
     m_Scale: 1
     m_AtlasIndex: 0
     m_ClassDefinitionType: 0
+  - m_Index: 1581
+    m_Metrics:
+      m_Width: 57.625
+      m_Height: 6.671875
+      m_HorizontalBearingX: -0.5625
+      m_HorizontalBearingY: 33.671875
+      m_HorizontalAdvance: 56.5
+    m_GlyphRect:
+      m_X: 956
+      m_Y: 1010
+      m_Width: 59
+      m_Height: 7
+    m_Scale: 1
+    m_AtlasIndex: 0
+    m_ClassDefinitionType: 0
   - m_Index: 1603
     m_Metrics:
       m_Width: 29.375
@@ -3401,21 +3416,6 @@ MonoBehaviour:
       m_Y: 1010
       m_Width: 54
       m_Height: 8
-    m_Scale: 1
-    m_AtlasIndex: 0
-    m_ClassDefinitionType: 0
-  - m_Index: 1581
-    m_Metrics:
-      m_Width: 57.625
-      m_Height: 6.671875
-      m_HorizontalBearingX: -0.5625
-      m_HorizontalBearingY: 33.671875
-      m_HorizontalAdvance: 56.5
-    m_GlyphRect:
-      m_X: 956
-      m_Y: 1010
-      m_Width: 59
-      m_Height: 7
     m_Scale: 1
     m_AtlasIndex: 0
     m_ClassDefinitionType: 0
@@ -3815,6 +3815,10 @@ MonoBehaviour:
   - m_ElementType: 1
     m_Unicode: 1785
     m_GlyphIndex: 136
+    m_Scale: 1
+  - m_ElementType: 1
+    m_Unicode: 8211
+    m_GlyphIndex: 1581
     m_Scale: 1
   - m_ElementType: 1
     m_Unicode: 8217
@@ -4507,10 +4511,6 @@ MonoBehaviour:
   - m_ElementType: 1
     m_Unicode: 65279
     m_GlyphIndex: 1
-    m_Scale: 1
-  - m_ElementType: 1
-    m_Unicode: 8211
-    m_GlyphIndex: 1581
     m_Scale: 1
   m_AtlasTextures:
   - {fileID: 2269541184760680327}
@@ -6265,7 +6265,7 @@ Material:
     - _GlowOffset: 0
     - _GlowOuter: 0.05
     - _GlowPower: 0.75
-    - _GradientScale: 6
+    - _GradientScale: 10
     - _LightAngle: 3.1416
     - _MaskSoftnessX: 0
     - _MaskSoftnessY: 0
@@ -6275,9 +6275,9 @@ Material:
     - _OutlineWidth: 0
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
-    - _ScaleRatioA: 0.8333333
-    - _ScaleRatioB: 0.6770833
-    - _ScaleRatioC: 0.6770833
+    - _ScaleRatioA: 0.9
+    - _ScaleRatioB: 0.73125
+    - _ScaleRatioC: 0.73125
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0

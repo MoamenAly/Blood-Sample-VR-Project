@@ -1,8 +1,8 @@
 using DG.Tweening;
-using System;
+using RTLTMPro;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.Localization.Settings;
 
 [DefaultExecutionOrder(-10000)]
 public class MirrorUIContent : MonoBehaviour
@@ -10,140 +10,76 @@ public class MirrorUIContent : MonoBehaviour
     public bool mirrorHorizontally = true;
     public bool mirrorVertically = false;
 
+    [Header("Font Names")]
+    public string arabicFontName = "ArabicFont";
+    public string englishFontName = "EnglishFont";
 
-    private void OnEnable()
+    private TMP_FontAsset arabicFont;
+    private TMP_FontAsset englishFont;
+    private Vector3 originalScale;
+
+    private void Awake()
     {
-      //  OnLangueUpdated(LanguageManager.Instance.ActiveLanguage.LanguageLayout);
+        originalScale = transform.localScale;
+
+        // Load fonts from Resources
+        arabicFont = Resources.Load<TMP_FontAsset>("Fonts & Materials/" + arabicFontName);
+        englishFont = Resources.Load<TMP_FontAsset>("Fonts & Materials/" + englishFontName);
+
+        if (arabicFont == null)
+            Debug.LogError($"Arabic font not found at Resources/Fonts/{arabicFontName}");
+        if (englishFont == null)
+            Debug.LogError($"English font not found at Resources/Fonts/{englishFontName}");
     }
 
-
-    void Start()
+    private void Start()
     {
-      //  LanguageManager.Instance.OnLangugaesUpdated += OnLangueUpdated;
+        LocalizationSettings.SelectedLocaleChanged += OnLanguageUpdated;
+        OnLanguageUpdated(LocalizationManager.Instance.CurrentLocale);
     }
 
-    //private void OnLangueUpdated(LanguageLayout languageLayout)
-    //{
-    //    if(languageLayout==LanguageLayout.RightToLeft)
-    //       Mirrior();
-    //    else
-    //        MirriorN();
-
-
-    //}
-
-    void Mirrior() {
-        TextMeshProUGUI[] childTransforms = GetComponentsInChildren<TextMeshProUGUI>(true);       
-
-        for (int i = 0; i < childTransforms.Length; i++)
-        {
-            Vector2 size = childTransforms[i].rectTransform.rect.size;
-            //Debug.Log(size);
-            Vector3 currentPosition = childTransforms[i].rectTransform.localPosition;
-
-            // Set anchorMin and anchorMax to center (0.5, 0.5)
-            childTransforms[i].rectTransform.anchorMin = new Vector2(0.5f, 0.5f);
-            childTransforms[i].rectTransform.anchorMax = new Vector2(0.5f, 0.5f);
-
-            // Set pivot to center (0.5, 0.5)
-            childTransforms[i].rectTransform.pivot = new Vector2(0.5f, 0.5f);
-
-            // Restore the original position
-            childTransforms[i].rectTransform.localPosition = currentPosition;
-
-            var scale = childTransforms[i].transform.localScale;
-            if (mirrorHorizontally)
-            {
-                childTransforms[i].transform.localScale = new Vector3(-1 * Mathf.Abs(scale.x), scale.y, scale.z);
-                if (childTransforms[i].horizontalAlignment == TMPro.HorizontalAlignmentOptions.Left)
-                {
-                    Debug.Log("Switched");
-                    childTransforms[i].horizontalAlignment = TMPro.HorizontalAlignmentOptions.Right;
-                }
-            }
-            else
-            {
-                childTransforms[i].transform.localScale = new Vector3(1 * Mathf.Abs(scale.x), scale.y, scale.z);
-                if (childTransforms[i].horizontalAlignment == TMPro.HorizontalAlignmentOptions.Right)
-                {
-                    Debug.Log("Switched");
-                    childTransforms[i].horizontalAlignment = TMPro.HorizontalAlignmentOptions.Left;
-                }
-            }
-
-
-            childTransforms[i].rectTransform.sizeDelta = size;
-
-        }
-
-
-        var parenyScale = transform.localScale;
-        if (mirrorHorizontally)
-        {
-            transform.localScale = new Vector3(-1 * Mathf.Abs(parenyScale.x), parenyScale.y, parenyScale.z);
-        }
-        else
-        {
-            transform.localScale = new Vector3(-1 * Mathf.Abs(parenyScale.x), parenyScale.y, parenyScale.z);
-        }
+    private void OnLanguageUpdated(UnityEngine.Localization.Locale newLocale)
+    {
+        bool isArabic = newLocale.Identifier.Code.StartsWith("ar");
+        ApplyMirrorAndFont(isArabic);
     }
 
-    void MirriorN()
+    private void ApplyMirrorAndFont(bool isArabic)
     {
-        TextMeshProUGUI[] childTransforms = GetComponentsInChildren<TextMeshProUGUI>(true);
+        RTLTextMeshPro[] texts = GetComponentsInChildren<RTLTextMeshPro>(true);
 
-        for (int i = 0; i < childTransforms.Length; i++)
+        foreach (var text in texts)
         {
-            Vector2 size = childTransforms[i].rectTransform.rect.size;
-            Debug.Log(size);
-            Vector3 currentPosition = childTransforms[i].rectTransform.localPosition;
+            // Switch font
+            text.font = isArabic ? arabicFont : englishFont;
 
-            // Set anchorMin and anchorMax to center (0.5, 0.5)
-            childTransforms[i].rectTransform.anchorMin = new Vector2(0.5f, 0.5f);
-            childTransforms[i].rectTransform.anchorMax = new Vector2(0.5f, 0.5f);
-
-            // Set pivot to center (0.5, 0.5)
-            childTransforms[i].rectTransform.pivot = new Vector2(0.5f, 0.5f);
-
-            // Restore the original position
-            childTransforms[i].rectTransform.localPosition = currentPosition;
-
-            var scale = childTransforms[i].transform.localScale;
-            if (mirrorHorizontally)
+            // Switch alignment only if not centered
+            if (text.alignment != TextAlignmentOptions.Center &&
+                text.alignment != TextAlignmentOptions.CenterGeoAligned &&
+                text.alignment != TextAlignmentOptions.Midline &&
+                text.alignment != TextAlignmentOptions.Baseline)
             {
-
-                childTransforms[i].transform.localScale = new Vector3(1 * Mathf.Abs(scale.x), scale.y, scale.z);
-                if (childTransforms[i].horizontalAlignment == TMPro.HorizontalAlignmentOptions.Right)
-                {
-                    Debug.Log("Switched to left");
-                    childTransforms[i].horizontalAlignment = TMPro.HorizontalAlignmentOptions.Left;
-                }
-            }
-            else
-            {
-                childTransforms[i].transform.localScale = new Vector3(1 * Mathf.Abs(scale.x), scale.y, scale.z);
-                if (childTransforms[i].horizontalAlignment == TMPro.HorizontalAlignmentOptions.Right)
-                {
-                    Debug.Log("Switched");
-                    childTransforms[i].horizontalAlignment = TMPro.HorizontalAlignmentOptions.Left;
-                }
+                if (isArabic && text.alignment == TextAlignmentOptions.Left)
+                    text.alignment = TextAlignmentOptions.Right;
+                else if (!isArabic && text.alignment == TextAlignmentOptions.Right)
+                    text.alignment = TextAlignmentOptions.Left;
             }
 
-
-            childTransforms[i].rectTransform.sizeDelta = size;
-
+            // Mirror scale
+            var scale = text.transform.localScale;
+            text.transform.localScale = new Vector3(
+                mirrorHorizontally ? (isArabic ? -Mathf.Abs(scale.x) : Mathf.Abs(scale.x)) : scale.x,
+                mirrorVertically ? -Mathf.Abs(scale.y) : scale.y,
+                scale.z
+            );
         }
 
-
-        var parenyScale = transform.localScale;
-        if (mirrorHorizontally)
-        {
-            transform.localScale = new Vector3(1 * Mathf.Abs(parenyScale.x), parenyScale.y, parenyScale.z);
-        }
-        else
-        {
-            transform.localScale = new Vector3(-1 * Mathf.Abs(parenyScale.x), parenyScale.y, parenyScale.z);
-        }
+        // Mirror parent object if needed
+        transform.localScale = new Vector3(
+            mirrorHorizontally ? (isArabic ? -Mathf.Abs(originalScale.x) : Mathf.Abs(originalScale.x)) : originalScale.x,
+            mirrorVertically ? -Mathf.Abs(originalScale.y) : originalScale.y,
+            originalScale.z
+        );
     }
 
 }

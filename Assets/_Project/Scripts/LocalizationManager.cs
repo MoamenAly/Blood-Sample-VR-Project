@@ -1,4 +1,3 @@
-using Sirenix.OdinInspector;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -6,84 +5,119 @@ using UnityEngine.Events;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
+using Sirenix.OdinInspector;
 
-public class LocalizationManager : MonoSinglton<LocalizationManager>
+public class LocalizationManager : MonoBehaviour
 {
+    private static LocalizationManager instance;
+
+    public static LocalizationManager Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = FindObjectOfType<LocalizationManager>();
+                if (instance == null)
+                {
+                    GameObject obj = new GameObject("LocalizationManager");
+                    instance = obj.AddComponent<LocalizationManager>();
+                }
+            }
+            return instance;
+        }
+    }
+
     private bool _active = false;
+
     public UnityAction<Locale> OnLocalChangedEvent;
     public UnityEvent OnArabicLanguageSelected, OnEnglishLanguageSelected;
+
+    [Header("UI Controls")]
     public bool isUseDropdown;
+
     [ShowIf("isUseDropdown")]
     [SerializeField] private TMP_Dropdown languageDropdown;
 
     public bool isUseButtons;
+
     [ShowIf("isUseButtons")]
     [SerializeField, ReadOnly] private Button2 englishButton;
+
     [ShowIf("isUseButtons")]
     [SerializeField, ReadOnly] private Button2 arabicButton;
 
-    public Locale CurrentLocale
-    {
-        get
-        {
-            return LocalizationSettings.SelectedLocale;
-        }
-    }
+    public Locale CurrentLocale => LocalizationSettings.SelectedLocale;
 
+    /*
+    private void Awake()
+    {
+        if (instance != null && instance != this)
+        {
+            Destroy(gameObject); // Destroy duplicate
+            return;
+        }
+
+        instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
+    */
 
     private void Start()
     {
         if (isUseDropdown)
         {
             languageDropdown.onValueChanged.AddListener(ChangeLocale);
-            int ID = PlayerPrefs.GetInt("LocalKey", 0);
-            languageDropdown.value = ID;
-            ChangeLocale(ID);
+            int savedID = PlayerPrefs.GetInt("LocalKey", 0);
+            languageDropdown.value = savedID;
+            ChangeLocale(savedID);
         }
 
         if (isUseButtons)
         {
-            englishButton.onClick.AddListener(EnglishLangauge);
-            arabicButton.onClick.AddListener(ArabicLangauge);
-            ChangeLocale(0);
+            englishButton.onClick.AddListener(EnglishLanguage);
+            arabicButton.onClick.AddListener(ArabicLanguage);
+
+            int savedID = PlayerPrefs.GetInt("LocalKey", 0);
+            StartCoroutine(SetLocale(savedID));
+        }
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Y))
+        {
+            StartCoroutine(SetLocale(1));
         }
 
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            StartCoroutine(SetLocale(0));
+        }
     }
 
     [Button]
     [ShowIf("isUseDropdown")]
     public void ChangeLocale(int localeID)
     {
-        if (_active)
-        {
-            return;
-        }
-
-        StartCoroutine(SetLocale(localeID));
+        if (!_active)
+            StartCoroutine(SetLocale(localeID));
     }
 
     [Button]
     [ShowIf("isUseButtons")]
-    public void EnglishLangauge()
+    public void EnglishLanguage()
     {
-        if (_active)
-        {
-            return;
-        }
-
-        StartCoroutine(SetLocale(1));
+        if (!_active)
+            StartCoroutine(SetLocale(1));
     }
 
     [Button]
     [ShowIf("isUseButtons")]
-    public void ArabicLangauge()
+    public void ArabicLanguage()
     {
-        if (_active)
-        {
-            return;
-        }
-
-        StartCoroutine(SetLocale(0));
+        if (!_active)
+            StartCoroutine(SetLocale(0));
     }
 
     private IEnumerator SetLocale(int localeID)
@@ -93,13 +127,12 @@ public class LocalizationManager : MonoSinglton<LocalizationManager>
         LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[localeID];
         PlayerPrefs.SetInt("LocalKey", localeID);
         OnLocalChangedEvent?.Invoke(LocalizationSettings.SelectedLocale);
-        handleLangugeLogic();
+        HandleLanguageLogic();
         _active = false;
     }
 
-    void handleLangugeLogic()
+    private void HandleLanguageLogic()
     {
-
         if (CurrentLocale.Identifier.Code == "ar")
         {
             OnArabicLanguageSelected?.Invoke();
@@ -108,10 +141,5 @@ public class LocalizationManager : MonoSinglton<LocalizationManager>
         {
             OnEnglishLanguageSelected?.Invoke();
         }
-
-    }
-    public bool IsRTLLanguageSelected()
-    {
-        return CurrentLocale.Identifier.Code == "ar";
     }
 }

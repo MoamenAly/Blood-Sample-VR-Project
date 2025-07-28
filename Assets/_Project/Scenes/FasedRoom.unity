@@ -9700,6 +9700,7 @@ GameObject:
   - component: {fileID: 225936567}
   - component: {fileID: 225936569}
   - component: {fileID: 225936568}
+  - component: {fileID: 225936570}
   m_Layer: 5
   m_Name: BackGround
   m_TagString: Untagged
@@ -9764,6 +9765,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 225936566}
   m_CullTransparentMesh: 1
+--- !u!114 &225936570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225936566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cae3b653606e0634cb7d31ddd65570bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mirrorHorizontally: 1
+  mirrorVertically: 0
+  arabicFontName: ArabicFont
+  englishFontName: EnglishFont
 --- !u!1 &226435277
 GameObject:
   m_ObjectHideFlags: 0
@@ -56604,6 +56621,7 @@ GameObject:
   - component: {fileID: 1029006236}
   - component: {fileID: 1029006235}
   - component: {fileID: 1029006234}
+  - component: {fileID: 1029006241}
   m_Layer: 5
   m_Name: CheckReady
   m_TagString: Untagged
@@ -56738,6 +56756,22 @@ RectTransform:
   m_AnchoredPosition: {x: -0.17, y: 1.605}
   m_SizeDelta: {x: 250, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1029006241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1029006233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cae3b653606e0634cb7d31ddd65570bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mirrorHorizontally: 1
+  mirrorVertically: 0
+  arabicFontName: ArabicFont
+  englishFontName: EnglishFont
 --- !u!1 &1030029240
 GameObject:
   m_ObjectHideFlags: 0
