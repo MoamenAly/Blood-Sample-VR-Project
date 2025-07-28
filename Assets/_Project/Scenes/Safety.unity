@@ -13419,8 +13419,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1847808078}
+  m_Children: []
   m_Father: {fileID: 926970668}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -22568,6 +22567,7 @@ GameObject:
   - component: {fileID: 355212685}
   - component: {fileID: 355212687}
   - component: {fileID: 355212686}
+  - component: {fileID: 355212688}
   m_Layer: 5
   m_Name: Check
   m_TagString: Untagged
@@ -22632,6 +22632,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 355212684}
   m_CullTransparentMesh: 1
+--- !u!114 &355212688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355212684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cae3b653606e0634cb7d31ddd65570bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mirrorHorizontally: 1
+  mirrorVertically: 0
+  arabicFontName: ArabicFont
+  englishFontName: EnglishFont
 --- !u!1 &355802327
 GameObject:
   m_ObjectHideFlags: 0
@@ -55575,6 +55591,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 202383462}
+  - {fileID: 1847808078}
   m_Father: {fileID: 1543483361}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -76595,6 +76612,7 @@ GameObject:
   - component: {fileID: 1289804771}
   - component: {fileID: 1289804773}
   - component: {fileID: 1289804772}
+  - component: {fileID: 1289804774}
   m_Layer: 5
   m_Name: Check
   m_TagString: Untagged
@@ -76659,6 +76677,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1289804770}
   m_CullTransparentMesh: 1
+--- !u!114 &1289804774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289804770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cae3b653606e0634cb7d31ddd65570bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mirrorHorizontally: 1
+  mirrorVertically: 0
+  arabicFontName: ArabicFont
+  englishFontName: EnglishFont
 --- !u!1 &1289843792
 GameObject:
   m_ObjectHideFlags: 0
@@ -114510,6 +114544,7 @@ GameObject:
   - component: {fileID: 1847808078}
   - component: {fileID: 1847808080}
   - component: {fileID: 1847808079}
+  - component: {fileID: 1847808081}
   m_Layer: 5
   m_Name: ScoreValue
   m_TagString: Untagged
@@ -114529,11 +114564,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 202383462}
+  m_Father: {fileID: 926970668}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.4100113, y: -9.600002}
+  m_AnchoredPosition: {x: -79.58996, y: -64.3}
   m_SizeDelta: {x: 66.24, y: 9.61}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1847808079
@@ -114639,6 +114674,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1847808077}
   m_CullTransparentMesh: 1
+--- !u!114 &1847808081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847808077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cae3b653606e0634cb7d31ddd65570bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mirrorHorizontally: 1
+  mirrorVertically: 0
+  arabicFontName: ArabicFont
+  englishFontName: EnglishFont
 --- !u!1 &1849288652
 GameObject:
   m_ObjectHideFlags: 0
@@ -125168,6 +125219,7 @@ GameObject:
   - component: {fileID: 1956191830}
   - component: {fileID: 1956191832}
   - component: {fileID: 1956191831}
+  - component: {fileID: 1956191833}
   m_Layer: 5
   m_Name: Check
   m_TagString: Untagged
@@ -125232,6 +125284,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1956191829}
   m_CullTransparentMesh: 1
+--- !u!114 &1956191833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956191829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cae3b653606e0634cb7d31ddd65570bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mirrorHorizontally: 1
+  mirrorVertically: 0
+  arabicFontName: ArabicFont
+  englishFontName: EnglishFont
 --- !u!1 &1957180745
 GameObject:
   m_ObjectHideFlags: 0
