@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Localization;
@@ -8,6 +9,10 @@ public class DisassemblableIMananger : MonoSinglton<DisassemblableIMananger>
 {
 
     public List<DisassemblableItem> items;
+    
+    public List<DisassemblableItem> items_vactNeedle;
+    public List<DisassemblableItem> items_ButterNeedle;
+
     public int NextItemOrderTotake = 1;
     public AudioSource audioSource;
     public LocalizedAudioClip localizedClip;
@@ -16,20 +21,9 @@ public class DisassemblableIMananger : MonoSinglton<DisassemblableIMananger>
 
 
     [SerializeField] private UnityEvent2 OnAllSucess;
-    // Start is called before the first frame update
-    void Start()
-    {
-       
-
-
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
+    public ChooseNeedleType chooseNeedleType;
+    
     public void SetAvailable(bool state)
     {
        CanCheck = state;
@@ -59,6 +53,19 @@ public class DisassemblableIMananger : MonoSinglton<DisassemblableIMananger>
             PlayAudio();
 
 
+        }
+    }
+
+    [Button]
+    public void AssignListOfItemNeedleTybes()
+    {
+        if (chooseNeedleType.needleType == NeedleType.Vacutainer)
+        {
+            items = items_vactNeedle;
+        }
+        else if (chooseNeedleType.needleType == NeedleType.Butterfly)
+        {
+            items = items_ButterNeedle;
         }
     }
     private void IncreasIndex()

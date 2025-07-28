@@ -127,7 +127,9 @@ namespace BNG {
         public void _CanRemoveItem() {
            CanRemoveItem = true;
         }
-        
+        public void _DisableCanRemoveItem() {
+            CanRemoveItem = false;
+        }
         public void _HideHeldItem() {
            HeldItem.gameObject.SetActive(false);
         }
