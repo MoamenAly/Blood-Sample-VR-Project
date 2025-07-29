@@ -9,5 +9,6 @@ public enum Elements
 	Coat,
 	CoholCOllider,
 	WrongCollisionNeedle,
-    IndexFinger
+    IndexFinger,
+	sharpTrash
 }

@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using BNG;
 using UnityEngine.Events;
-using UnityEngine.InputSystem.iOS;
-using VFolders.Libs;
+
+
 
 public class DisassemblableItem : MonoBehaviour
 {
@@ -55,8 +55,5 @@ public class DisassemblableItem : MonoBehaviour
     }
 
 
-    void DestoryOnScusse()
-    {
-        gameObject.Destroy();
-    }
+
 }
