@@ -101,6 +101,18 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e7423a30fce069b49a9aa95c18768ffe
+    m_Address: Change the gloves before 1
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bf9510fca09ecd74d9ec716967646827
+    m_Address: Put on the new gloves 1
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: e5874f3717d398d4ba3a714bfb945fd7, type: 2}
   m_SchemaSet:

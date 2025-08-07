@@ -75,6 +75,14 @@ MonoBehaviour:
     m_Key: video
     m_Metadata:
       m_Items: []
+  - m_Id: 7900203468779520
+    m_Key: changegloves
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7900327234301952
+    m_Key: wearnewgloves
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items:
     - rid: 1350229444260003840
@@ -144,6 +152,14 @@ MonoBehaviour:
           - en
           - ar-EG
         - m_KeyId: 4217502861684736
+          m_TableCodes:
+          - ar-EG
+          - en
+        - m_KeyId: 7900203468779520
+          m_TableCodes:
+          - en
+          - ar-EG
+        - m_KeyId: 7900327234301952
           m_TableCodes:
           - ar-EG
           - en

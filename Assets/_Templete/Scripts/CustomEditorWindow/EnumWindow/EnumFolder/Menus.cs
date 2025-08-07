@@ -17,5 +17,7 @@ public enum Menus
 	 FinsihOrder,
 	 TubesSticker,
 	 Rate,
-	 RemoveSafety
+	 RemoveSafety,
+	 ChangeGloves,
+	 TakeNewGloves
 }

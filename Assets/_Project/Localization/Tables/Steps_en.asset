@@ -228,6 +228,14 @@ MonoBehaviour:
     m_Localized: Score
     m_Metadata:
       m_Items: []
+  - m_Id: 10023248543150080
+    m_Localized: Change the gloves before inserting the needle.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10118470891532288
+    m_Localized: Put on the new gloves
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
