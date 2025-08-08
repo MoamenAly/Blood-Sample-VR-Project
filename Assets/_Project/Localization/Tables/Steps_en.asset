@@ -220,7 +220,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 5420761546334208
-    m_Localized: Each item must be disposed of immediately after removal in the red
+    m_Localized: Each item must be disposed of immediately after removal in the yellow
       medical waste container.
     m_Metadata:
       m_Items: []
@@ -233,7 +233,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 10118470891532288
-    m_Localized: Put on the new gloves
+    m_Localized: Wear the new gloves
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10428805917286400
+    m_Localized: Take off
     m_Metadata:
       m_Items: []
   references:

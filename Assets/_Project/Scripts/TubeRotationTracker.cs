@@ -14,6 +14,7 @@ public class TubeRotationTracker : MonoBehaviour
     [SerializeField] private float maxRotationSpeed = 10f; // degrees per second
 
     [Header("UI Elements")]
+    [SerializeField] private GameObject canvasMixture;
     [SerializeField] private TextMeshProUGUI rotationIndexText;
     [SerializeField] private Slider progressSlider;
 
@@ -69,30 +70,34 @@ public class TubeRotationTracker : MonoBehaviour
 
     void TrackRotation()
     {
-        float currentY = Mathf.DeltaAngle(initialY, transform.eulerAngles.y);
-        float absY = Mathf.Abs(currentY);
-
-        if (!reached180 && absY >= rotationThreshold)
+        if (canvasMixture.activeSelf)
         {
-            reached180 = true;
-            Debug.Log("Reached 180 degrees");
-        }
+            float currentY = Mathf.DeltaAngle(initialY, transform.eulerAngles.y);
+            float absY = Mathf.Abs(currentY);
 
-        if (reached180 && absY <= returnThreshold)
-        {
-            rotationIndex++;
-            reached180 = false;
-
-            if (rotationIndex >= totalRotationTarget)
+            if (!reached180 && absY >= rotationThreshold)
             {
-                rotationIndex = totalRotationTarget;
-                finished = true;
-                Debug.Log("Rotation finished.");
-                OnRotationFinished?.Invoke();
+                reached180 = true;
+                Debug.Log("Reached 180 degrees");
             }
 
-            UpdateUI();
+            if (reached180 && absY <= returnThreshold)
+            {
+                rotationIndex++;
+                reached180 = false;
+
+                if (rotationIndex >= totalRotationTarget)
+                {
+                    rotationIndex = totalRotationTarget;
+                    finished = true;
+                    Debug.Log("Rotation finished.");
+                    OnRotationFinished?.Invoke();
+                }
+
+                UpdateUI();
+            }
         }
+        
     }
 
     void UpdateUI()

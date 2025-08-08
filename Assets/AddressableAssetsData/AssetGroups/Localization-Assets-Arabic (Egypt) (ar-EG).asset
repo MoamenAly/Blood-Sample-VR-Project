@@ -17,26 +17,18 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: ecb04467dce566c4ba5e347e81b40504
   m_SerializeEntries:
-  - m_GUID: 6cdee839d81a4024db49108ea70d7382
-    m_Address: welcome
+  - m_GUID: 012670f7d493f8a41a3c27825447e26d
+    m_Address: "\u0627\u062E\u0652\u062A\u064E\u0631\u0652 \u062D\u064E\u062C\u0652\u0645\u064E
+      \u0627\u0644\u0625\u0650\u0628\u0652\u0631\u064E\u0629\u0650 \u0627\u0644\u0645\u064F\u0646\u064E\u0627\u0633\u0650\u0628\u064E."
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-ar-EG
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 8c2c9b81a93324748b490ac18d837bd4
-    m_Address: "\u062A\u0623\u0643\u062F \u0645\u0646 \u062C\u0627\u0647\u0632\u064A\u0629"
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ar-EG
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 3123a9c4d3d37d64a93f89f3731d6fa1
-    m_Address: "\u0642\u0645 \u0628\u0627\u0631\u062A\u062F\u0627\u0621 \u0645\u0639\u062F\u0627\u062A"
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ar-EG
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: efed97bd99bceb64a9d7733c78eb78e8
-    m_Address: "\u0627\u062C\u0645\u0639 \u0627\u0644\u0639\u0646\u0627\u0635\u0631 "
+  - m_GUID: 1c79d622a0035e743a7ed052b3cf288e
+    m_Address: "\u0647\u064E\u0630\u064E\u0627 \u0647\u064F\u0648\u064E \u0627\u0644\u062A\u0651\u064E\u0631\u0652\u062A\u0650\u064A\u0628\u064F
+      \u0627\u0644\u0635\u0651\u064E\u062D\u0650\u064A\u062D\u064F \u0644\u0650\u0625\u0650\u0632\u064E\u0627\u0644\u064E\u0629\u0650
+      \u0627\u0644\u0623\u064E\u062F\u064E\u0648\u064E\u0627\u062A\u0650 \u0639\u0650\u0646\u062F\u064E
+      \u0627\u0644\u0625\u0650\u0646\u0652\u062A\u0650\u0647\u064E\u0627\u0621\u0650"
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-ar-EG
@@ -53,38 +45,8 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-ar-EG
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: d01cbc87c9b093442a8351c5e8334ebe
-    m_Address: "\u0627\u064F\u0646\u0652\u0638\u064F\u0631\u0652 \u0625\u0650\u0644\u064E\u0649
-      \u0630\u0650\u0631\u064E\u0627\u0639\u0650"
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ar-EG
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 012670f7d493f8a41a3c27825447e26d
-    m_Address: "\u0627\u062E\u0652\u062A\u064E\u0631\u0652 \u062D\u064E\u062C\u0652\u0645\u064E
-      \u0627\u0644\u0625\u0650\u0628\u0652\u0631\u064E\u0629\u0650 \u0627\u0644\u0645\u064F\u0646\u064E\u0627\u0633\u0650\u0628\u064E."
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ar-EG
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: a507a56eba6241648aeaad352c1185ad
-    m_Address: "\u0623\u064E\u062F\u0652\u062E\u0650\u0644\u0650 \u0627\u0644\u0625\u0650\u0628\u0652\u0631\u064E\u0629\u064E."
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ar-EG
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f8ebc54f0e9ae0c43b61c39242634c65
-    m_Address: "\u0627\u0650\u0645\u0652\u0632\u0650\u062C\u0650 \u0627\u0644\u0623\u064E\u0646\u064E\u0627\u0628\u0650\u064A\u0628\u064E
-      \u0628\u064E\u0639\u0652\u062F\u064E \u0627\u0644\u0633\u0651\u064E\u062D\u0652\u0628\u0650."
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ar-EG
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 1c79d622a0035e743a7ed052b3cf288e
-    m_Address: "\u0647\u064E\u0630\u064E\u0627 \u0647\u064F\u0648\u064E \u0627\u0644\u062A\u0651\u064E\u0631\u0652\u062A\u0650\u064A\u0628\u064F
-      \u0627\u0644\u0635\u0651\u064E\u062D\u0650\u064A\u062D\u064F \u0644\u0650\u0625\u0650\u0632\u064E\u0627\u0644\u064E\u0629\u0650
-      \u0627\u0644\u0623\u064E\u062F\u064E\u0648\u064E\u0627\u062A\u0650 \u0639\u0650\u0646\u062F\u064E
-      \u0627\u0644\u0625\u0650\u0646\u0652\u062A\u0650\u0647\u064E\u0627\u0621\u0650"
+  - m_GUID: 3123a9c4d3d37d64a93f89f3731d6fa1
+    m_Address: "\u0642\u0645 \u0628\u0627\u0631\u062A\u062F\u0627\u0621 \u0645\u0639\u062F\u0627\u062A"
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-ar-EG
@@ -107,8 +69,46 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-ar-EG
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ff1070d4e6abd8a4abcd786993a89fa3
-    m_Address: "\u0642\u0645 \u0628\u062A\u0641\u0643\u064A\u0643 \u0627\u0644\u0639\u0646\u0635\u0631"
+  - m_GUID: 4f6a0bced6b1dbc468d34f3020c8faea
+    m_Address: _- - 1 (1)
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ar-EG
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6cdee839d81a4024db49108ea70d7382
+    m_Address: welcome
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ar-EG
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8c2c9b81a93324748b490ac18d837bd4
+    m_Address: "\u062A\u0623\u0643\u062F \u0645\u0646 \u062C\u0627\u0647\u0632\u064A\u0629"
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ar-EG
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a507a56eba6241648aeaad352c1185ad
+    m_Address: "\u0623\u064E\u062F\u0652\u062E\u0650\u0644\u0650 \u0627\u0644\u0625\u0650\u0628\u0652\u0631\u064E\u0629\u064E."
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ar-EG
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d01cbc87c9b093442a8351c5e8334ebe
+    m_Address: "\u0627\u064F\u0646\u0652\u0638\u064F\u0631\u0652 \u0625\u0650\u0644\u064E\u0649
+      \u0630\u0650\u0631\u064E\u0627\u0639\u0650"
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ar-EG
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: efed97bd99bceb64a9d7733c78eb78e8
+    m_Address: "\u0627\u062C\u0645\u0639 \u0627\u0644\u0639\u0646\u0627\u0635\u0631 "
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ar-EG
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f8ebc54f0e9ae0c43b61c39242634c65
+    m_Address: "\u0627\u0650\u0645\u0652\u0632\u0650\u062C\u0650 \u0627\u0644\u0623\u064E\u0646\u064E\u0627\u0628\u0650\u064A\u0628\u064E
+      \u0628\u064E\u0639\u0652\u062F\u064E \u0627\u0644\u0633\u0651\u064E\u062D\u0652\u0628\u0650."
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-ar-EG
@@ -119,8 +119,8 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-ar-EG
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 0a1fb7efdde53724faca0c4a5633a497
-    m_Address: _- - 1
+  - m_GUID: ff1070d4e6abd8a4abcd786993a89fa3
+    m_Address: "\u0642\u0645 \u0628\u062A\u0641\u0643\u064A\u0643 \u0627\u0644\u0639\u0646\u0635\u0631"
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-ar-EG

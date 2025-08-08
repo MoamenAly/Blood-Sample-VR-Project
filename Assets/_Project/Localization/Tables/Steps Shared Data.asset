@@ -208,7 +208,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 10118470891532288
-    m_Key: Put on the new gloves
+    m_Key: Wear the new gloves
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10428805917286400
+    m_Key: Take off
     m_Metadata:
       m_Items: []
   m_Metadata:
