@@ -22,13 +22,6 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 42165add1d9339742a151ea07f7bdfc2
-    m_Address: videosound
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ar-EG
-    - Locale-en
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6000fcfb1bc69d649b9d31438537630b
     m_Address: Assets/_Project/Localization/Tables/Audios Shared Data.asset
     m_ReadOnly: 1

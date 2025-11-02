@@ -76,7 +76,7 @@ public class RestOnUnGrab : MonoBehaviour
         onUngrab?.Invoke();
         CancelInvoke(nameof(BackToDefaultPostion));
         grabed = false;
-        Invoke(nameof(BackToDefaultPostion), 1.5f);
+        Invoke(nameof(BackToDefaultPostion), 0.5f);
     }
 
 
@@ -96,57 +96,35 @@ public class RestOnUnGrab : MonoBehaviour
 
     internal void BackToDefaultPostion()
     {
-        if (shouldRest)
-        {
-            defaultPosition = intialPostion;
-            transform.rotation = defaultRoation;
-            transform.position = defaultPosition + Vector3.up * 0.01f;
-        }
-        else
-        {
+        if (grabbable == null || grabbable.enabled == false || grabbable.BeingHeld)
+            return;
 
-            //Debug.Log("back to default" + gameObject.name);
-            if (grabbable == null || grabbable.enabled == false || grabbable.BeingHeld) return;
-            float diffenceInY = transform.position.y - defaultPosition.y;
-
-            if (Mathf.Abs(diffenceInY) < 0.05)
-            {
-                if (ResetState == ResetState.Dynamic)
-                {
-                    float y = defaultPosition.y;
-                    defaultPosition = transform.position;
-                    defaultPosition.y = y;
-                    transform.position = defaultPosition;
-
-                    if (Vector3.Dot(transform.up, Vector3.up) != 1)
-                    {
-                        transform.rotation = defaultRoation;
-                    }
-
-                    return;
-                }
-            }
-            else
-            {
-                if (grabbable == null || grabbable.enabled == false || grabbable.BeingHeld) return;
-                transform.localPosition = defaultPosition;
-                transform.localRotation = defaultRoation;
-            }
-        }
         _rigidbody.velocity = Vector3.zero;
         _rigidbody.angularVelocity = Vector3.zero;
 
+        Vector3 targetPosition;
+        Quaternion targetRotation = defaultRoation;
+
         if (overrideedTransform != null)
         {
-            transform.rotation = defaultRoation;
-            transform.position = overrideedTransform.position;
+            targetPosition = overrideedTransform.position;
         }
         else
         {
-            transform.rotation = defaultRoation;
-            transform.position = defaultPosition + Vector3.up * 0.01f;
+            targetPosition = defaultPosition + Vector3.up * 0.01f;
         }
+
+        // Kill any existing tweens before starting new ones to avoid conflicts
+        transform.DOKill();
+
+        // Smoothly move and rotate back to position/rotation
+        transform.DOMove(targetPosition, 0.75f) // duration: 0.75 seconds
+            .SetEase(Ease.InOutSine);
+
+        transform.DORotateQuaternion(targetRotation, 0.75f)
+            .SetEase(Ease.InOutSine);
     }
+
 
 
     private void OnCollisionEnter(Collision collision)
@@ -201,18 +179,29 @@ public class RestOnUnGrab : MonoBehaviour
     {
         _rigidbody.velocity = Vector3.zero;
         _rigidbody.angularVelocity = Vector3.zero;
+
+        Vector3 targetPosition;
+        Quaternion targetRotation = defaultRoation;
+
         if (overrideedTransform != null)
         {
-            transform.rotation = defaultRoation;
-            defaultPosition = transform.position = overrideedTransform.position;
+            targetPosition = overrideedTransform.position;
         }
         else
         {
-            transform.rotation = defaultRoation;
-            transform.position = defaultPosition + Vector3.up * 0.01f;
+            targetPosition = defaultPosition + Vector3.up * 0.01f;
         }
+
+        transform.DOKill();
+
+        transform.DOMove(targetPosition, 0.75f)
+            .SetEase(Ease.InOutSine);
+
+        transform.DORotateQuaternion(targetRotation, 0.75f)
+            .SetEase(Ease.InOutSine);
     }
-     public void ImmediateReturn()
+
+    public void ImmediateReturn()
     {
         CancelInvoke(nameof(BackToDefaultPostion));
         grabed = false;

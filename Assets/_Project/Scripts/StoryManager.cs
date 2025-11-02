@@ -178,12 +178,55 @@ public class StoryManager : MonoBehaviour
     // Life Cycle
     // ======================
 
+    [FoldoutGroup("Controls")]
+    [EnableIf("@isSequenceRunning")]
+    [Button(ButtonSizes.Large)]
+    public void SkipStep()
+    {
+        if (!isSequenceRunning || currentIndex < 0 || currentIndex >= steps.Count)
+            return;
+
+        // stop the typewriter and reveal full subtitle
+        StopTypewriter();
+        var step = steps[currentIndex];
+        SetSubtitle(step.subtitle ?? "");
+
+        // stop the narration audio if playing
+        if (audioSource != null && audioSource.isPlaying)
+            audioSource.Stop();
+
+        // trigger narration-finished event immediately
+        step.onNarrationFinished?.Invoke();
+
+        // handle auto-next behavior
+        if (step.autoNextOnNarrationEnd)
+        {
+            if (step.autoNextDelay > 0f)
+                StartCoroutine(AutoNextAfterDelay(step.autoNextDelay));
+            else
+                NextStep();
+        }
+    }
+
+    private IEnumerator AutoNextAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        NextStep();
+    }
+
     private void Start()
     {
         if (playOnStart)
             StartCoroutine(StartSequenceAfterDelay(playOnStartDelay));
     }
 
+    public void Update()
+    {
+        if(Input.GetKeyUp(KeyCode.Mouse2))
+        {
+            SkipStep();
+        }
+    }
     private IEnumerator StartSequenceAfterDelay(float delaySeconds)
     {
         if (delaySeconds > 0f)
