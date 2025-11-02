@@ -1,29 +1,31 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.UIElements;
 using BNG;
 
 public class Sphygmomanometer : MonoBehaviour
 {
     [Header("References")]
-    public CustomGrabbable pumpGrabbable;               // Pump object to grap
-    public Transform pump;               // Pump object to scale
-    public Transform pointer;            // Pointer needle
-    public AudioClip pumpSound;        // Sound when pumping
-    public AudioClip releaseSound;     // Sound when releasing
+    public CustomGrabbable pumpGrabbable;
+    public Transform pump;
+    public Transform pointer;
+    public AudioClip pumpSound;
+    public AudioClip releaseSound;
     public AudioSource SfxSound;
 
     [Header("Settings")]
-    public float scaleDelta = 0.2f;      // How much the pump shrinks
-    public float scaleSpeed = 5f;        // How fast it scales
-    public float pointerStep = 8f;       // Rotation step per click
-    public float maxRotation = 120f;     // Maximum rotation before stop
-    public float releaseSpeed = 60f;     // Rotation speed when releasing
+    public float scaleDelta = 0.2f;
+    public float scaleSpeed = 5f;
+    public float pointerStep = 8f;
+    public float maxRotation = 120f;
+    public float releaseSpeed = 60f; 
+    public float passiveDecaySpeed = 15f; 
 
     private Vector3 originalScale;
     private float currentRotation = 0f;
     private bool isReleasing = false;
     private bool canClick = true;
+    private bool isPumping = false;
+    public bool isWantSoundRelease;
 
     void Start()
     {
@@ -33,21 +35,31 @@ public class Sphygmomanometer : MonoBehaviour
 
     void Update()
     {
-        if(pumpGrabbable.BeingHeld)
+        isPumping = false;
+
+        if (pumpGrabbable.BeingHeld)
         {
             var primaryGrabber = pumpGrabbable.GetPrimaryGrabber();
-            if (primaryGrabber.HandSide == ControllerHand.Right && InputBridge.Instance.RightTrigger > 0 && canClick)
-            {
-                StartCoroutine(DoPumpAction());
-            }
 
-            else if (primaryGrabber.HandSide == ControllerHand.Left && InputBridge.Instance.LeftTrigger > 0 && canClick)
+            if (primaryGrabber != null)
             {
-                StartCoroutine(DoPumpAction());
+                bool triggerPressed =
+                    (primaryGrabber.HandSide == ControllerHand.Right && InputBridge.Instance.RightTrigger > 0) ||
+                    (primaryGrabber.HandSide == ControllerHand.Left && InputBridge.Instance.LeftTrigger > 0);
+
+                if (triggerPressed && canClick)
+                {
+                    isPumping = true;
+                    StartCoroutine(DoPumpAction());
+                }
             }
         }
 
-
+        if (!isPumping && !isReleasing && currentRotation > 0)
+        {
+            currentRotation = Mathf.MoveTowards(currentRotation, 0, passiveDecaySpeed * Time.deltaTime);
+            pointer.localRotation = Quaternion.Euler(0, currentRotation, 0);
+        }
 
         if (isReleasing)
         {
@@ -55,7 +67,6 @@ public class Sphygmomanometer : MonoBehaviour
             currentRotation = Mathf.MoveTowards(currentRotation, 0, step);
             pointer.localRotation = Quaternion.Euler(0, currentRotation, 0);
 
-            // Stop releasing when back to zero
             if (Mathf.Approximately(currentRotation, 0))
             {
                 isReleasing = false;
@@ -68,11 +79,9 @@ public class Sphygmomanometer : MonoBehaviour
     {
         canClick = false;
 
-        // Play pump sound
         if (pumpSound != null)
             SfxSound.PlayOneShot(pumpSound);
 
-        // Scale down
         Vector3 targetScale = originalScale * (1f - scaleDelta);
         float t = 0f;
         while (t < 1f)
@@ -82,7 +91,6 @@ public class Sphygmomanometer : MonoBehaviour
             yield return null;
         }
 
-        // Scale up
         t = 0f;
         while (t < 1f)
         {
@@ -91,7 +99,6 @@ public class Sphygmomanometer : MonoBehaviour
             yield return null;
         }
 
-        // Rotate pointer
         if (pointer != null)
         {
             currentRotation += pointerStep;
@@ -99,11 +106,11 @@ public class Sphygmomanometer : MonoBehaviour
             pointer.localRotation = Quaternion.Euler(0, currentRotation, 0);
         }
 
-        // If reached maximum, start release
         if (Mathf.Approximately(currentRotation, maxRotation))
         {
             yield return new WaitForSeconds(0.3f);
-            if (releaseSound != null)
+
+            if (releaseSound != null && isWantSoundRelease)
                 SfxSound.PlayOneShot(releaseSound);
 
             isReleasing = true;
