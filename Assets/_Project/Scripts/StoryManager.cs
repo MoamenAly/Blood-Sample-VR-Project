@@ -88,6 +88,21 @@ public class StoryStep
     public UnityEvent2 onStepStart;
 
     [FoldoutGroup("Step/Events")]
+    [LabelText("Start Event Delay (sec)")]
+    [Min(0f)]
+    public float startEventDelay = 0f; // Default = 0 (immediate)
+
+    [FoldoutGroup("Step/Events")]
+    [LabelText("On Delayed Event")]
+    public UnityEvent2 onDelayedEvent;
+
+    [FoldoutGroup("Step/Events")]
+    [LabelText("Delayed Event Delay (sec)")]
+    [Min(0f)]
+    public float delayedEventDelay = 1f;
+
+
+    [FoldoutGroup("Step/Events")]
     [LabelText("On Narration Finished")]
     public UnityEvent2 onNarrationFinished;
 
@@ -95,6 +110,7 @@ public class StoryStep
     [FoldoutGroup("Step")]
     [GUIColor("@isCurrent ? new Color(0.45f, 0.9f, 0.45f) : new Color(0.65f, 0.65f, 0.65f)")]
     private string _currentBadge => isCurrent ? "▶ This Step" : "—";
+
 }
 
 #endregion
@@ -350,8 +366,18 @@ public class StoryManager : MonoBehaviour
         bool willType = step.typewriterMode != TypewriterMode.Off;
         SetSubtitle(willType ? "" : (step.subtitle ?? ""));
 
+        // 🔸 Wait for step-specific delay before invoking On Step Start
+        if (step.startEventDelay > 0f)
+            yield return new WaitForSeconds(step.startEventDelay);
+
+        // Run On Step Start
         step.onStepStart?.Invoke();
 
+        // 🔹 Schedule delayed event (independent of narration)
+        if (step.onDelayedEvent != null && step.delayedEventDelay > 0f)
+            StartCoroutine(InvokeAfterDelay(step.delayedEventDelay, step.onDelayedEvent));
+
+        // --- Continue with narration and typewriter ---
         if (step.narration != null && audioSource != null)
         {
             audioSource.clip = step.narration;
@@ -387,9 +413,15 @@ public class StoryManager : MonoBehaviour
 
                 NextStep();
             }
-
         }
     }
+
+    private IEnumerator InvokeAfterDelay(float delay, UnityEvent2 evt)
+    {
+        yield return new WaitForSeconds(delay);
+        evt?.Invoke();
+    }
+
 
     private void StartTimedEvents(StoryStep step)
     {

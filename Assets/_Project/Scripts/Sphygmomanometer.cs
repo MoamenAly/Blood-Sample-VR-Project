@@ -28,11 +28,17 @@ public class Sphygmomanometer : MonoBehaviour
     private float releaseSpeed = 60f;
     public float passiveDecaySpeed = 15f;
 
+    [Tooltip("Events that will trigger one by one when the cuff reaches maximum pressure")]
+    public List<UnityEvent> onMaxPressureEvents = new List<UnityEvent>();
+
+    private int currentMaxPressureEventIndex = 0;
+
+
     [Tooltip("Events that will trigger one by one when the cuff is fully released")]
     public List<UnityEvent2> onFullReleaseEvents = new List<UnityEvent2>();
 
-    [Tooltip("Delay between each event firing (seconds)")]
-    public float delayBetweenReleaseEvents = 0.3f;
+    private int currentFullReleaseEventIndex = 0;
+
 
     private Vector3 originalScale;
     private float currentRotation = 0f;
@@ -43,8 +49,11 @@ public class Sphygmomanometer : MonoBehaviour
 
     private int cuffBlendShapeIndex = 0;
     private bool hasTriggeredReleaseSequence = false;
+    private bool isEnabled = true;
 
     public float ReleaseSpeed { get => releaseSpeed; set => releaseSpeed = value; }
+    public bool IsWantSoundRelease { get => isWantSoundRelease; set => isWantSoundRelease = value; }
+    public bool IsEnabled { get => isEnabled; set => isEnabled = value; }
 
     void Start()
     {
@@ -55,63 +64,66 @@ public class Sphygmomanometer : MonoBehaviour
 
     void Update()
     {
-        isPumping = false;
-
-        // --- Handle pumping input ---
-        if (pumpGrabbable.BeingHeld)
+        if(IsEnabled)
         {
-            var primaryGrabber = pumpGrabbable.GetPrimaryGrabber();
+            isPumping = false;
 
-            if (primaryGrabber != null)
+            // --- Handle pumping input ---
+            if (pumpGrabbable.BeingHeld)
             {
-                bool triggerPressed =
-                    (primaryGrabber.HandSide == ControllerHand.Right && InputBridge.Instance.RightTrigger > 0) ||
-                    (primaryGrabber.HandSide == ControllerHand.Left && InputBridge.Instance.LeftTrigger > 0);
+                var primaryGrabber = pumpGrabbable.GetPrimaryGrabber();
 
-                if (triggerPressed && canClick)
+                if (primaryGrabber != null)
                 {
-                    isPumping = true;
-                    StartCoroutine(DoPumpAction());
+                    bool triggerPressed =
+                        (primaryGrabber.HandSide == ControllerHand.Right && InputBridge.Instance.RightTrigger > 0) ||
+                        (primaryGrabber.HandSide == ControllerHand.Left && InputBridge.Instance.LeftTrigger > 0);
+
+                    if (triggerPressed && canClick)
+                    {
+                        isPumping = true;
+                        StartCoroutine(DoPumpAction());
+                    }
                 }
             }
-        }
 
-        // --- 🎧 Handle heartbeat sound ---
-        HandleHeartbeatSound();
+            // --- 🎧 Handle heartbeat sound ---
+            HandleHeartbeatSound();
 
-        // --- Handle decay and release ---
-        if (!isPumping && !isReleasing && currentRotation > 0)
-        {
-            currentRotation = Mathf.MoveTowards(currentRotation, 0, passiveDecaySpeed * Time.deltaTime);
-            pointer.localRotation = Quaternion.Euler(0, currentRotation, 0);
-        }
-
-        if (isReleasing)
-        {
-            float step = ReleaseSpeed * Time.deltaTime;
-            currentRotation = Mathf.MoveTowards(currentRotation, 0, step);
-            pointer.localRotation = Quaternion.Euler(0, currentRotation, 0);
-
-            if (Mathf.Approximately(currentRotation, 0))
+            // --- Handle decay and release ---
+            if (!isPumping && !isReleasing && currentRotation > 0)
             {
-                isReleasing = false;
-                canClick = true;
+                currentRotation = Mathf.MoveTowards(currentRotation, 0, passiveDecaySpeed * Time.deltaTime);
+                pointer.localRotation = Quaternion.Euler(0, currentRotation, 0);
+            }
 
-                if (!hasTriggeredReleaseSequence)
+            if (isReleasing)
+            {
+                float step = ReleaseSpeed * Time.deltaTime;
+                currentRotation = Mathf.MoveTowards(currentRotation, 0, step);
+                pointer.localRotation = Quaternion.Euler(0, currentRotation, 0);
+
+                if (Mathf.Approximately(currentRotation, 0))
                 {
-                    hasTriggeredReleaseSequence = true;
-                    StartCoroutine(PlayReleaseEventSequence());
+                    isReleasing = false;
+                    canClick = true;
+
+                    if (!hasTriggeredReleaseSequence)
+                    {
+                        hasTriggeredReleaseSequence = true;
+                        TriggerNextFullReleaseEvent();
+                    }
                 }
             }
-        }
 
-        // --- Update cuff blend shape based on pointer rotation ---
-        UpdateCuffBlendShape();
+            // --- Update cuff blend shape based on pointer rotation ---
+            UpdateCuffBlendShape();
+        }
     }
 
     private void HandleHeartbeatSound()
     {
-        if (isStethoscopePlaced && pumpGrabbable.BeingHeld)
+        if (isStethoscopePlaced && isReleasing)
         {
             if (heartbeatAudio != null && !heartbeatAudio.isPlaying)
             {
@@ -171,9 +183,12 @@ public class Sphygmomanometer : MonoBehaviour
 
         if (Mathf.Approximately(currentRotation, maxRotation))
         {
+            // 🔸 Trigger max pressure event sequence
+            TriggerNextMaxPressureEvent();
+
             yield return new WaitForSeconds(0.3f);
 
-            if (releaseSound != null && isWantSoundRelease)
+            if (releaseSound != null && IsWantSoundRelease)
                 SfxSound.PlayOneShot(releaseSound);
 
             isReleasing = true;
@@ -185,20 +200,42 @@ public class Sphygmomanometer : MonoBehaviour
         }
     }
 
-    // 🔹 Fires each event in the list one by one with delay
-    private IEnumerator PlayReleaseEventSequence()
+    private void TriggerNextMaxPressureEvent()
     {
-        for (int i = 0; i < onFullReleaseEvents.Count; i++)
-        {
-            if (onFullReleaseEvents[i] != null)
-            {
-                onFullReleaseEvents[i].Invoke();
-            }
+        if (onMaxPressureEvents == null || onMaxPressureEvents.Count == 0)
+            return;
 
-            if (delayBetweenReleaseEvents > 0)
-                yield return new WaitForSeconds(delayBetweenReleaseEvents);
+        if (currentMaxPressureEventIndex >= 0 && currentMaxPressureEventIndex < onMaxPressureEvents.Count)
+        {
+            onMaxPressureEvents[currentMaxPressureEventIndex]?.Invoke();
+        }
+
+        currentMaxPressureEventIndex++;
+
+        if (currentMaxPressureEventIndex >= onMaxPressureEvents.Count)
+        {
+            currentMaxPressureEventIndex = 0;
         }
     }
+
+    private void TriggerNextFullReleaseEvent()
+    {
+        if (onFullReleaseEvents == null || onFullReleaseEvents.Count == 0)
+            return;
+
+        if (currentFullReleaseEventIndex >= 0 && currentFullReleaseEventIndex < onFullReleaseEvents.Count)
+        {
+            onFullReleaseEvents[currentFullReleaseEventIndex]?.Invoke();
+        }
+
+        currentFullReleaseEventIndex++;
+
+        if (currentFullReleaseEventIndex >= onFullReleaseEvents.Count)
+        {
+            currentFullReleaseEventIndex = 0;
+        }
+    }
+
 
     public void SetStethoscopePlaced(bool placed)
     {

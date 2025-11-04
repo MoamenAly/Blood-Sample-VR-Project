@@ -31,6 +31,8 @@ namespace Dreamteck.Splines
         public enum EvaluateMode { Cached, Calculate }
         public enum SampleMode { Default, Uniform, Optimized }
         public enum UpdateMode { Update, FixedUpdate, LateUpdate, AllUpdate, None }
+
+
         public Space space
         {
             get { return _space; }
@@ -154,6 +156,20 @@ namespace Dreamteck.Splines
         public UpdateMode updateMode = UpdateMode.Update;
         [HideInInspector]
         public TriggerGroup[] triggerGroups = new TriggerGroup[0];
+
+        public void _ChangeUpdateMode(int index)
+        {
+            if (index < 0 || index >= System.Enum.GetValues(typeof(UpdateMode)).Length)
+            {
+                Debug.LogWarning("Index out of range for UpdateMode enum");
+                return;
+            }
+
+            updateMode = (UpdateMode)index;
+
+            Debug.Log("UpdateMode changed to: " + updateMode);
+        }
+
 
         public AnimationCurve customValueInterpolation
         {
