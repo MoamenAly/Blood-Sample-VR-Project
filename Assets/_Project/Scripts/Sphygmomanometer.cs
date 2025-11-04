@@ -8,6 +8,7 @@ public class Sphygmomanometer : MonoBehaviour
     public CustomGrabbable pumpGrabbable;
     public Transform pump;
     public Transform pointer;
+    public SkinnedMeshRenderer cuff;
     public AudioClip pumpSound;
     public AudioClip releaseSound;
     public AudioSource SfxSound;
