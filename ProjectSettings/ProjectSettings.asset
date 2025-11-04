@@ -144,8 +144,6 @@ PlayerSettings:
   tvOSBundleVersion: 1.0
   bundleVersion: 0.1.0
   preloadedAssets:
-  - {fileID: 11400000, guid: 48987baa24de634439d083a48e0a9545, type: 2}
-  - {fileID: 7543542328349453683, guid: cf25d76fb5d0f594cbf2ff5f0841d29a, type: 2}
   - {fileID: 11400000, guid: c98a1fb6bcd5550499f5f11b2a29206c, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -282,7 +280,7 @@ PlayerSettings:
   AndroidEnableTango: 0
   androidEnableBanner: 1
   androidUseLowAccuracyLocation: 0
-  androidUseCustomKeystore: 1
+  androidUseCustomKeystore: 0
   m_AndroidBanners:
   - width: 320
     height: 180
