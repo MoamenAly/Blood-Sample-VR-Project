@@ -25,7 +25,7 @@ public class Sphygmomanometer : MonoBehaviour
     public float scaleSpeed = 5f;
     public float pointerStep = 8f;
     public float maxRotation = 120f;
-    private float releaseSpeed = 60f;
+    public float releaseSpeed = 60f;
     public float passiveDecaySpeed = 15f;
 
     [Tooltip("Events that will trigger one by one when the cuff reaches maximum pressure")]
