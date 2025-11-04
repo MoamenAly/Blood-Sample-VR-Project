@@ -122,6 +122,7 @@ namespace BNG {
             go.transform.position = pos;
 
             AudioSource source = go.AddComponent<AudioSource>();
+            source.volume = 0.3f;
             source.clip = clip;
 
             // Currently only Oculus Integration supports spatial audio
