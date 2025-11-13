@@ -16,19 +16,7 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 9187ab73366421b4583616ec0d24f505
-  m_SerializeEntries:
-  - m_GUID: 242c220f133c1f64584f796b125efe27
-    m_Address: Steps_ar-EG
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ar-EG
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 725b77690868cfb4ab68554d97f9704f
-    m_Address: UIData_ar-EG
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ar-EG
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: e5874f3717d398d4ba3a714bfb945fd7, type: 2}
   m_SchemaSet:
